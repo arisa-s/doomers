@@ -5,15 +5,15 @@ import { usePathname } from "next/navigation";
 
 export default function DesktopMenu() {
   return (
-    <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-whity/30 backdrop-blur-xs backdrop-filter z-10">
-      <div className="px-6 py-16 flex flex-col h-full">
+    <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-whity/30 backdrop-blur-xs backdrop-filter z-10 border-r border-primary">
+      <div className="px-12 py-16 flex flex-col h-full">
         <Link href="/">
           <Image
             src="/images/logo/logoTransparent.png"
             alt="DOOMERS"
             width={800}
             height={800}
-            className="max-w-full h-auto"
+            className="h-auto mr-auto max-w-40"
           />
         </Link>
 
@@ -70,7 +70,7 @@ const MenuItem = ({
     <li>
       <Link
         href={href}
-        className={`text-3xl font-accent block py-2 px-3 hover:opacity-80 rounded transition-colors ${
+        className={`text-2xl font-accent block py-2 px-3 hover:opacity-80 rounded transition-colors ${
           selected ? "opacity-100" : "opacity-30"
         }`}
       >

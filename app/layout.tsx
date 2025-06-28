@@ -21,9 +21,9 @@ export default function RootLayout({
   const getBackgroundImage = (path: string) => {
     switch (path) {
       case "/":
-        return "/images/hands/handsOne.png";
-      case "/cast-and-crew":
         return "/images/hands/handsTwo.png";
+      case "/cast-and-crew":
+        return "/images/hands/handsOne.png";
       case "/press":
         return "/images/hands/handsThree.png";
       case "/reading-list":
