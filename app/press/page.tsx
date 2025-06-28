@@ -18,7 +18,7 @@ export default function Press() {
         "A play that captures the absurdity of tech's existential hand-wringing while the world burns.",
       color: "bg-blue-600",
       url: "https://www.theguardian.com",
-      textColor: "text-white",
+      textColor: "text-primary",
     },
     {
       publication: "Fortune",
@@ -26,7 +26,7 @@ export default function Press() {
         "At times, it&apos;s possible for an audience member at Matthew Gasda&apos;s play Doomers to feel like a fly on the wall in a San Francisco startup &apos;war room.&apos;",
       color: "bg-red-500",
       url: "https://fortune.com",
-      textColor: "text-white",
+      textColor: "text-primary",
     },
     {
       publication: "The New York Times",
@@ -34,7 +34,7 @@ export default function Press() {
         "Doomers, a new, ripped-from-the-headlines play about the weekend that Sam Altman, the chief executive of the start-up OpenAI, was briefly fired.",
       color: "bg-gray-800",
       url: "https://www.nytimes.com",
-      textColor: "text-white",
+      textColor: "text-primary",
     },
     {
       publication: "Tech Explore",
@@ -42,7 +42,7 @@ export default function Press() {
         "Doomers seizes a crucial, high-profile moment in the recent history of AI to turn it into a reflection on its future and on the collision between money, technology, power, and the dream of building a perfect world. Gasda doesn&apos;t just dramatize corporate intrigue—he forces the audience to sit with the unsettling reality that the people shaping AI&apos;s future may not fully grasp its consequences.",
       color: "bg-green-600",
       url: "#",
-      textColor: "text-white",
+      textColor: "text-primary",
     },
     {
       publication: "Broadway World",
@@ -50,7 +50,7 @@ export default function Press() {
         "Philosophical debates, twink lust, and Silicon Valley navel-gazing—Doomers will cover it all. And just as Gasda&apos;s players staged Dimes Square in living rooms, they&apos;re performing Doomers in tech tycoon-style apartments, offices, and galleries across New York and San Francisco, reflecting the naturalistic (if cringe) habitats of the Silicon Valley elite.",
       color: "bg-purple-600",
       url: "https://www.broadwayworld.com",
-      textColor: "text-white",
+      textColor: "text-primary",
     },
   ];
 
@@ -85,7 +85,7 @@ export default function Press() {
                 >
                   {/* Front of Card */}
                   <div
-                    className={`absolute inset-0 bg-primary p-6 flex flex-col items-center justify-center backface-hidden shadow-lg hover:shadow-xl transition-shadow`}
+                    className={`absolute inset-0 backdrop-blur-sm bg-white/20 p-6 flex flex-col items-center justify-center backface-hidden`}
                   >
                     <div className="text-center">
                       <h3
@@ -126,7 +126,7 @@ export default function Press() {
                   </div>
 
                   {/* Back of Card */}
-                  <div className="absolute inset-0 bg-secondary/90 backdrop-blur-sm border border-primary/20 rounded-xl p-6 flex flex-col justify-center backface-hidden rotate-y-180 shadow-lg">
+                  <div className="absolute inset-0 bg-secondary/90 backdrop-blur-sm p-6 flex flex-col justify-center backface-hidden rotate-y-180">
                     <div className="text-center">
                       <blockquote className="text-primary leading-relaxed mb-4">
                         &ldquo;{item.quote}&rdquo;

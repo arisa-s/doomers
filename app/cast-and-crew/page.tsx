@@ -131,7 +131,7 @@ export default function CastAndCrew() {
                     <div className="flex flex-col items-center text-center">
                       {/* Profile Picture (Using initials as placeholder) */}
                       <div
-                        className={`w-full h-80  bg-primary flex items-center justify-center mb-2 text-white font-bold text-lg`}
+                        className={`w-full h-80 backdrop-blur-sm bg-white/20 flex items-center justify-center mb-2 text-white font-bold text-lg`}
                       >
                         {/* {member.initials} */}
                       </div>
