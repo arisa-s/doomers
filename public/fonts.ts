@@ -19,22 +19,22 @@ export const coolvetica = localFont({
 export const timesNewRoman = localFont({
   src: [
     {
-      path: "../fonts/timesNewRoman/Times_New_Roman.ttf",
+      path: "../fonts/timesNewRoman/TIMES_NEW_ROMAN.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../fonts/timesNewRoman/Times_New_Roman_Italic.ttf",
+      path: "../fonts/timesNewRoman/TIMES_NEW_ROMAN_ITALIC.ttf",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../fonts/timesNewRoman/Times_New_Roman_Bold.ttf",
+      path: "../fonts/timesNewRoman/TIMES_NEW_ROMAN_BOLD.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../fonts/timesNewRoman/Times_New_Roman_Bold_Italic.ttf",
+      path: "../fonts/timesNewRoman/TIMES_NEW_ROMAN_BOLD_ITALIC.ttf",
       weight: "700",
       style: "italic",
     },
