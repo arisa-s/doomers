@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
+@theme {
+  /* Custom font families */
+  --font-family-accent: "Coolvetica", sans-serif;
+  --font-family-base: "Times New Roman", serif;
+  
+  /* Custom font sizes */
+  --font-size-xs: 0.6rem;
+  --font-size-sm: 0.6rem;
+  --font-size-base: 0.75rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.1rem;
+  --font-size-2xl: 1.25rem;
+  --font-size-3xl: 1.5rem;
+  --font-size-4xl: 1.875rem;
+  --font-size-5xl: 2.25rem;
+  --font-size-6xl: 3rem;
+  --font-size-7xl: 3.75rem;
+  --font-size-8xl: 4.5rem;
+  --font-size-9xl: 6rem;
+}
+
+/* Custom CSS variables for your design system */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-coolvetica: "Coolvetica", sans-serif;
+  --font-times-new-roman: "Times New Roman", serif;
+
+  --blue-smoke: #9FB0BC;
+  --sam-altman-beige: #FBE0C2;
+  --absolute-black: #000000;
+  --oxide-brown: #8E3823;
+
+  /* ---------------------
+     Text color variables
+     --------------------- */
+  --text-primary: var(--absolute-black);
+  --text-accent: var(--oxide-brown);
+  --text-secondary: #3a3a3a;
+  --text-tertiary: #555555;
+  --text-dimmed: #777777;
+  --text-link: #0645ad;
+  --text-invert: #ffffff;
+
+  /* ------------------------
+     Background color variables
+     ------------------------ */
+  --bg-primary: var(--blue-smoke);
+  --bg-secondary: var(--sam-altman-beige);
+  
+  /* ---------------------
+     Border color variables
+     --------------------- */
+  --border-primary: var(--oxide-brown);
+  --border-secondary: #888888;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Custom utility classes for your design system */
+@utility text-primary {
+  color: var(--text-primary);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility text-accent {
+  color: var(--text-accent);
 }
 
+@utility text-secondary {
+  color: var(--text-secondary);
+}
+
+@utility text-tertiary {
+  color: var(--text-tertiary);
+}
+
+@utility text-dimmed {
+  color: var(--text-dimmed);
+}
+
+@utility text-link {
+  color: var(--text-link);
+}
+
+@utility text-invert {
+  color: var(--text-invert);
+}
+
+@utility bg-primary {
+  background-color: var(--bg-primary);
+}
+
+@utility bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+@utility border-primary {
+  border-color: var(--border-primary);
+}
+
+@utility border-secondary {
+  border-color: var(--border-secondary);
+}
+
+@utility font-accent {
+  font-family: var(--font-coolvetica);
+}
+
+@utility font-base {
+  font-family: var(--font-times-new-roman);
+}
+
+/* Apply "primary" as the default text and background for body */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-times-new-roman);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.75rem;
 }
