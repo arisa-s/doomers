@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function DesktopMenu() {
   return (
     <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-whity/30 backdrop-blur-xs backdrop-filter z-10 border-r border-primary">
-      <div className="px-12 py-16 flex flex-col h-full">
+      <div className="px-8 py-16 flex flex-col h-full">
         <Link href="/">
           <Image
             src="/images/logo/logoTransparent.png"
@@ -26,32 +26,33 @@ export default function DesktopMenu() {
           </ul>
         </nav>
 
-        <button className="text-primary bg-white/50 mt-auto py-4 px-4 rounded-md font-accent text-xl">
-          Get Ticket Now
-        </button>
-
-        <div className="mt-auto border-t border-primary pt-6">
-          <h3 className="text-lg font-accent text-accent mb-4">Contacts</h3>
-          <ul className="space-y-2">
-            <li>
-              <a
-                href="https://www.instagram.com/doomersuk/"
-                target="_blank"
-                className="block py-1 px-2 text-primary transition-colors"
-              >
-                Instagram: @doomersuk
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:doomersuk@gmail.com"
-                target="_blank"
-                className="block py-1 px-2 text-primary transition-colors"
-              >
-                doomersuk@gmail.com
-              </a>
-            </li>
-          </ul>
+        <div className="mt-auto space-y-6">
+          <button className="text-primary bg-white/40 mt-auto py-4 px-4 rounded-md font-accent text-xl w-full">
+            Get Ticket Now
+          </button>
+          <div className="mt-auto border-t border-primary pt-6">
+            <h3 className="text-lg font-accent text-accent mb-4">Contacts</h3>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="https://www.instagram.com/doomersuk/"
+                  target="_blank"
+                  className="block py-1 px-2 text-primary transition-colors"
+                >
+                  Instagram: @doomersuk
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:doomersuk@gmail.com"
+                  target="_blank"
+                  className="block py-1 px-2 text-primary transition-colors"
+                >
+                  doomersuk@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

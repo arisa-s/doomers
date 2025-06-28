@@ -11,7 +11,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Main content area with side-by-side layout */}
       <div className="flex-1 w-full">
-        <div className="max-w-6xl text-xl py-24 px-20">
+        <div className="max-w-6xl text-xl text-right py-24 px-20">
           {/* <Image
             src="/images/hands/handsThree.png"
             alt="AI generated hands"
