@@ -112,7 +112,7 @@ export default function CastAndCrew() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full">
       <div className="flex-1 p-8 pb-20">
         <div className="max-w-6xl mx-auto">
           <div className="max-w-4xl mx-auto">
