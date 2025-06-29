@@ -1,11 +1,12 @@
 "use client";
+import { LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function DesktopMenu() {
   return (
-    <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-whity/30 backdrop-blur-xs backdrop-filter z-10 border-r border-primary">
+    <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-whity/30 backdrop-blur-xs backdrop-filter z-10 border-r border-primary hidden md:block">
       <div className="px-8 py-16 flex flex-col h-full">
         <Link href="/">
           <Image
@@ -13,29 +14,34 @@ export default function DesktopMenu() {
             alt="DOOMERS"
             width={800}
             height={800}
-            className="h-auto mr-auto max-w-40"
+            className="h-auto mr-auto max-w-42"
           />
         </Link>
 
         <nav className="space-y-4 mt-12">
           <ul className="space-y-2">
-            <MenuItem href="/">Home</MenuItem>
-            <MenuItem href="/cast-and-crew">Cast & Crew</MenuItem>
-            <MenuItem href="/press">Press</MenuItem>
-            <MenuItem href="/reading-list">Reading List</MenuItem>
+            {LINKS.map((link) => (
+              <MenuItem key={link.href} href={link.href}>
+                {link.label}
+              </MenuItem>
+            ))}
           </ul>
         </nav>
 
         <div className="mt-auto space-y-6">
-          <button className="text-primary bg-white/40 mt-auto py-4 px-4 rounded-md font-accent text-xl w-full">
-            Get Ticket Now
-          </button>
+          <div className="flex flex-col items-center space-y-4">
+            <button className="text-primary bg-white/40 mt-auto py-4 px-4 rounded-md font-accent text-xl w-full hover:bg-white/60 transition-colors cursor-pointer">
+              Get Ticket Now
+            </button>
+            <span className="text-sm">18th of Sept - 4th of Oct</span>
+          </div>
+
           <div className="mt-auto border-t border-primary pt-6">
             <h3 className="text-lg font-accent text-accent mb-4">Contacts</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="https://www.instagram.com/doomersuk/"
+                  href="https://www.instagram.com/doomers.uk/"
                   target="_blank"
                   className="block py-1 px-2 text-primary transition-colors"
                 >

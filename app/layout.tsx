@@ -1,8 +1,5 @@
-"use client";
 import "./globals.css";
 import { coolvetica, timesNewRoman } from "@/public/fonts";
-import DesktopMenu from "@/components/layout/DesktopMenu";
-import { usePathname } from "next/navigation";
 
 // Note: metadata can't be used in client components, so we'll handle this differently
 // export const metadata: Metadata = {
@@ -15,24 +12,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-
-  // Map different pages to different hand images
-  const getBackgroundImage = (path: string) => {
-    switch (path) {
-      case "/":
-        return "/images/hands/handsTwo.png";
-      case "/cast-and-crew":
-        return "/images/hands/handsOne.png";
-      case "/press":
-        return "/images/hands/handsThree.png";
-      case "/reading-list":
-        return "/images/hands/handsFour.png";
-      default:
-        return "/images/hands/handsOne.png";
-    }
-  };
-
   return (
     <html lang="en">
       <head>
@@ -43,15 +22,8 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${timesNewRoman.variable} ${coolvetica.variable} antialiased flex relative transition-all duration-1000 ease-in-out`}
-        style={{
-          backgroundImage: `url('${getBackgroundImage(pathname)}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        className={`${timesNewRoman.variable} ${coolvetica.variable} antialiased`}
       >
-        <DesktopMenu />
         {children}
       </body>
     </html>

@@ -41,6 +41,7 @@
   --text-dimmed: #777777;
   --text-link: #0645ad;
   --text-invert: #ffffff;
+  --text-muted: #777777;
 
   /* ------------------------
      Background color variables
@@ -82,6 +83,10 @@
 
 @utility text-invert {
   color: var(--text-invert);
+}
+
+@utility text-muted {
+  color: var(--text-muted);
 }
 
 @utility bg-primary {

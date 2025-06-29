@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import MainLayout from "@/components/layout/MainLayout";
 
 export const metadata: Metadata = {
   title: "Reading List - Doomers",
@@ -50,64 +51,68 @@ export default function ReadingList() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <div className="flex-1 px-12 py-20 pb-20">
-        <div className="max-w-4xl mx-auto">
-          {/* Content */}
-          <div className="space-y-16 text-lg">
-            {/* Talks Section */}
-            <section>
-              <h2 className="text-2xl font-accent text-accent mb-8">Talks</h2>
-              <div className="space-y-6">
-                {talks.map((talk, index) => (
-                  <div key={index} className="border-b border-primary/20 pb-4">
-                    <h3 className="text-lg text-primary mb-3 leading-relaxed">
-                      {talk.title}
-                    </h3>
-                    <a
-                      href={talk.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-accent hover:underline text-sm"
-                    >
-                      Watch →
-                    </a>
-                  </div>
-                ))}
+    <MainLayout
+      backgroundImage="url('/images/hands/handsFour.png')"
+      pageTitle="/reading-list"
+    >
+      <div className="space-y-12 md:space-y-16 text-lg">
+        {/* Talks Section */}
+        <section>
+          <SectionTitle title="Talks" />
+          <div className="space-y-4 md:space-y-6">
+            {talks.map((talk, index) => (
+              <div key={index} className="border-b border-primary pb-1 md:pb-2">
+                <h3 className="text-sm md:text-lg text-primary mb-1 md:mb-2 leading-relaxed">
+                  {talk.title}
+                </h3>
+                <a
+                  href={talk.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline text-sm"
+                >
+                  Watch →
+                </a>
               </div>
-            </section>
-
-            {/* Books Section */}
-            <section>
-              <h2 className="text-2xl font-accent text-accent mb-8">Books</h2>
-              <div className="space-y-4">
-                {books.map((book, index) => (
-                  <div key={index} className="text-primary">
-                    {book}
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Articles Section */}
-            <section>
-              <h2 className="text-2xl font-accent text-accent mb-8">
-                Articles
-              </h2>
-              <div className="space-y-4">
-                {articles.map((article, index) => (
-                  <div key={index} className="text-primary">
-                    <span className="block">{article.title}</span>
-                    <span className="text-primary/60 text-sm">
-                      by {article.author}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </section>
+            ))}
           </div>
-        </div>
+        </section>
+
+        {/* Books Section */}
+        <section>
+          <SectionTitle title="Books" />
+          <div className="space-y-4">
+            {books.map((book, index) => (
+              <div key={index} className="text-primary text-sm md:text-lg">
+                {book}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Articles Section */}
+        <section>
+          <SectionTitle title="Articles" />
+          <div className="space-y-4">
+            {articles.map((article, index) => (
+              <div key={index} className="text-primary text-sm md:text-lg">
+                <span className="block">{article.title}</span>
+                <span className="text-primary/60 text-xs md:text-sm">
+                  by {article.author}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
-    </div>
+    </MainLayout>
   );
 }
+
+const SectionTitle = ({ title }: { title: string }) => {
+  return (
+    <h2 className="text-xl md:text-2xl font-accent text-accent mb-6 md:mb-8">
+      {title}
+    </h2>
+  );
+};
