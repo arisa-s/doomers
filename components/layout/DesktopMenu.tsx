@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 export default function DesktopMenu() {
   return (
-    <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-white/20 backdrop-blur-xl backdrop-saturate-150 z-20 border-r border-white/30 hidden md:block shadow-2xl">
+    <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-white/20 backdrop-blur-xl backdrop-saturate-150 z-20 border-r border-primary hidden md:block shadow-2xl">
       <div className="px-8 py-16 flex flex-col h-full">
         <Link href="/">
           <Image

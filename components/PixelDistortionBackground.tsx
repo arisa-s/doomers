@@ -42,8 +42,8 @@ export default function PixelDistortionBackground({
   imageSrc,
   className = "",
   distortionStrength = 50,
-  mouseRadius = 0.3,
-  relaxationSpeed = 0.1,
+  mouseRadius = 0.15,
+  relaxationSpeed = 0.05,
 }: PixelDistortionBackgroundProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
@@ -79,8 +79,8 @@ export default function PixelDistortionBackground({
     rendererRef.current = renderer;
 
     // DataTexture setup
-    const dataWidth = 80;
-    const dataHeight = 80;
+    const dataWidth = 160;
+    const dataHeight = 160;
     const size = dataWidth * dataHeight;
     const data = new Float32Array(4 * size);
     for (let i = 0; i < size; i++) {
@@ -132,16 +132,16 @@ export default function PixelDistortionBackground({
         vec2 newUV = vUv;
         newUV.y = (vUv.y - 0.5) * scale + 0.5;
 
-        vec2 pixelSize = 1.0 / vec2(80.0, 80.0);
+        vec2 pixelSize = 1.0 / vec2(160.0, 160.0);
         vec2 quantizedUV = floor(vUv / pixelSize) * pixelSize;
         
         vec4 offset = texture2D(uDataTexture, quantizedUV);
         
         float distortionIntensity = length(offset.rg - 127.5) / 127.5;
         
-        vec2 distortedUV = newUV + (offset.rg - 127.5) * 0.004;
+        vec2 distortedUV = newUV + (offset.rg - 127.5) * 0.001;
         
-        float aberrationStrength = distortionIntensity * 0.015;
+        float aberrationStrength = distortionIntensity * 0.005;
         vec2 redUV = clamp(distortedUV + vec2(aberrationStrength, 0.0), 0.0, 1.0);
         vec2 greenUV = clamp(distortedUV, 0.0, 1.0);
         vec2 blueUV = clamp(distortedUV - vec2(aberrationStrength, 0.0), 0.0, 1.0);
