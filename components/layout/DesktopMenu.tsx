@@ -77,7 +77,7 @@ const MenuItem = ({
     <li>
       <Link
         href={href}
-        className={`text-2xl font-accent block py-2 px-3 hover:opacity-80 rounded transition-colors ${
+        className={`text-lg font-accent block py-2 px-3 hover:opacity-80 rounded transition-colors ${
           selected ? "opacity-100" : "opacity-30"
         }`}
       >
