@@ -54,11 +54,13 @@ extend({ CustomDistortionMaterial });
 
 declare module "@react-three/fiber" {
   interface ThreeElements {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     customDistortionMaterial: any;
   }
 }
 
 const Scene = ({ backgroundImage }: { backgroundImage: string }) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const materialRef = useRef<any>(null);
   const texture = new THREE.TextureLoader().load(backgroundImage);
 
