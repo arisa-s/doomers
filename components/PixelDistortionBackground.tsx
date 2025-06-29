@@ -1,4 +1,5 @@
 "use client";
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
@@ -78,8 +79,8 @@ export default function PixelDistortionBackground({
     rendererRef.current = renderer;
 
     // DataTexture setup
-    const dataWidth = 46;
-    const dataHeight = 46;
+    const dataWidth = 80;
+    const dataHeight = 80;
     const size = dataWidth * dataHeight;
     const data = new Float32Array(4 * size);
     for (let i = 0; i < size; i++) {
@@ -131,19 +132,19 @@ export default function PixelDistortionBackground({
         vec2 newUV = vUv;
         newUV.y = (vUv.y - 0.5) * scale + 0.5;
 
-        vec2 pixelSize = 1.0 / vec2(46.0, 46.0);
+        vec2 pixelSize = 1.0 / vec2(80.0, 80.0);
         vec2 quantizedUV = floor(vUv / pixelSize) * pixelSize;
         
         vec4 offset = texture2D(uDataTexture, quantizedUV);
         
         float distortionIntensity = length(offset.rg - 127.5) / 127.5;
         
-        vec2 distortedUV = newUV + (offset.rg - 127.5) * 0.008;
+        vec2 distortedUV = newUV + (offset.rg - 127.5) * 0.004;
         
         float aberrationStrength = distortionIntensity * 0.015;
-        vec2 redUV = distortedUV + vec2(aberrationStrength, 0.0);
-        vec2 greenUV = distortedUV;
-        vec2 blueUV = distortedUV - vec2(aberrationStrength, 0.0);
+        vec2 redUV = clamp(distortedUV + vec2(aberrationStrength, 0.0), 0.0, 1.0);
+        vec2 greenUV = clamp(distortedUV, 0.0, 1.0);
+        vec2 blueUV = clamp(distortedUV - vec2(aberrationStrength, 0.0), 0.0, 1.0);
         
         float r = texture2D(uTexture, redUV).r;
         float g = texture2D(uTexture, greenUV).g;

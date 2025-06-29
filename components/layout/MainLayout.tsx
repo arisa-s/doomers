@@ -25,8 +25,6 @@ export default function MainLayout({
   const imageUrl = extractImageUrl(backgroundImage);
 
   // Debug logging
-  console.log("MainLayout - backgroundImage:", backgroundImage);
-  console.log("MainLayout - extracted imageUrl:", imageUrl);
 
   return (
     <>
