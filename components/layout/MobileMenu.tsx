@@ -20,7 +20,7 @@ export default function MobileMenu() {
 
   return (
     <header className="fixed w-full z-50 transition-colors duration-300 md:hidden">
-      <div className="bg-white/50 backdrop-blur-md backdrop-filter">
+      <div className="bg-white/20 backdrop-blur-md backdrop-filter">
         <div className="max-w-8xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
           {/* Left side - Hamburger and Logo */}
           <div className="flex items-center">
