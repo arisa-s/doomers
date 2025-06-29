@@ -3,6 +3,7 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { getImageProps } from "next/image";
 
 /**
  * PixelDistortionBackground - Interactive WebGL background with pixel distortion effect
@@ -30,6 +31,17 @@ import * as THREE from "three";
  * - React Strict Mode compatible
  */
 
+function getBackgroundImage(srcSet = "") {
+  const imageSet = srcSet
+    .split(", ")
+    .map((str) => {
+      const [url, dpi] = str.split(" ");
+      return `url("${url}") ${dpi}`;
+    })
+    .join(", ");
+  return `image-set(${imageSet})`;
+}
+
 interface PixelDistortionBackgroundProps {
   imageSrc: string;
   className?: string;
@@ -50,6 +62,18 @@ export default function PixelDistortionBackground({
   const sceneRef = useRef<THREE.Scene | null>(null);
   const animationIdRef = useRef<number | null>(null);
   const isInitializedRef = useRef(false);
+
+  // Generate optimized background image using Next.js
+  const {
+    props: { srcSet },
+  } = getImageProps({
+    alt: "",
+    width: 1920,
+    height: 1080,
+    src: imageSrc,
+    quality: 85,
+  });
+  const optimizedBackgroundImage = getBackgroundImage(srcSet);
 
   useEffect(() => {
     console.log("PixelDistortionBackground: useEffect starting for", imageSrc);
@@ -333,7 +357,7 @@ export default function PixelDistortionBackground({
       ref={containerRef}
       className={`fixed inset-0 w-full h-full -z-10 ${className}`}
       style={{
-        backgroundImage: `url('${imageSrc}')`,
+        backgroundImage: optimizedBackgroundImage,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

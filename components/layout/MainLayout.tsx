@@ -3,6 +3,9 @@
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import PixelDistortionBackground from "../PixelDistortionBackground";
+import { useResponsive } from "@/utils/useResponsive";
+import ConditionalWrap from "../shared/ConditionalWrap";
+import { getImageProps } from "next/image";
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -16,6 +19,17 @@ function extractImageUrl(backgroundImage: string): string {
   return match ? match[1] : backgroundImage;
 }
 
+function getBackgroundImage(srcSet = "") {
+  const imageSet = srcSet
+    .split(", ")
+    .map((str) => {
+      const [url, dpi] = str.split(" ");
+      return `url("${url}") ${dpi}`;
+    })
+    .join(", ");
+  return `image-set(${imageSet})`;
+}
+
 export default function MainLayout({
   children,
   backgroundImage,
@@ -23,39 +37,68 @@ export default function MainLayout({
 }: MainLayoutProps) {
   // Extract the actual image URL from the CSS background-image string
   const imageUrl = extractImageUrl(backgroundImage);
+  const { isMobile } = useResponsive();
 
-  // Debug logging
+  // Generate optimized background image using Next.js
+  const {
+    props: { srcSet },
+  } = getImageProps({
+    alt: "",
+    width: 1920,
+    height: 1080,
+    src: imageUrl,
+    quality: 85,
+  });
+  const optimizedBackgroundImage = getBackgroundImage(srcSet);
 
   return (
-    <>
-      {/* Three.js Pixel Distortion Background - Fixed to viewport */}
-      {/* Key prop forces re-mount when image changes */}
-      <PixelDistortionBackground
-        key={imageUrl} // Force re-mount on image change
-        imageSrc={imageUrl}
-        distortionStrength={50}
-        mouseRadius={0.3}
-        relaxationSpeed={0.1}
-      />
+    <ConditionalWrap
+      condition={isMobile}
+      wrapper={(children) => (
+        <div
+          style={{
+            backgroundImage: optimizedBackgroundImage,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {children}
+        </div>
+      )}
+    >
+      <>
+        {/* Three.js Pixel Distortion Background - Fixed to viewport */}
+        {/* Key prop forces re-mount when image changes */}
+        {!isMobile && (
+          <PixelDistortionBackground
+            key={imageUrl} // Force re-mount on image change
+            imageSrc={imageUrl}
+            distortionStrength={15}
+            mouseRadius={0.15}
+            relaxationSpeed={0.05}
+          />
+        )}
 
-      <div className="min-h-screen flex-col text-sm md:text-lg relative z-10">
-        <MobileMenu />
-        <div className="flex relative z-20">
-          <DesktopMenu />
-          <div className="w-full p-6 md:p-20">
-            <div className="max-w-6xl mx-auto">
-              {pageTitle ? (
-                <div className="md:text-center mb-12 hidden">
-                  <h1 className="text-lg md:text-2xl font-accent text-accents mb-4">
-                    {pageTitle}
-                  </h1>
-                </div>
-              ) : null}
-              {children}
+        <div className="min-h-screen flex-col text-sm md:text-lg relative z-10">
+          <MobileMenu />
+          <div className="flex relative z-20">
+            <DesktopMenu />
+            <div className="w-full p-6 md:p-20">
+              <div className="max-w-6xl mx-auto">
+                {pageTitle ? (
+                  <div className="md:text-center mb-12 hidden">
+                    <h1 className="text-lg md:text-2xl font-accent text-accents mb-4">
+                      {pageTitle}
+                    </h1>
+                  </div>
+                ) : null}
+                {children}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </>
+    </ConditionalWrap>
   );
 }

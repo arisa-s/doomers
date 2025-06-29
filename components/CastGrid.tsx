@@ -101,7 +101,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
             <div
               key={member._id}
               onClick={() => openCrewModal(member)}
-              className="bg-secondary/50 p-6 rounded-lg cursor-pointer hover:bg-secondary/60 transition-all duration-300"
+              className="bg-secondary/50 md:p-6 rounded-lg cursor-pointer hover:bg-secondary/60 transition-all duration-300"
             >
               <h3 className="text-xl font-accent text-accent mb-2">
                 {member.role}
