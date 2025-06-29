@@ -19,19 +19,14 @@ export default function MobileMenu() {
   }, [pathname]);
 
   return (
-    <div className="bg-primary-bg/50 backdrop-blur-md backdrop-filter sticky top-0 z-50">
-      <div
-        className={`md:hidden max-w-8xl mx-auto px-6 lg:px-8 ${
-          menuOpen ? "bg-primary-bg/50 backdrop-blur-md backdrop-filter" : ""
-        }`}
-      >
-        <div></div>
-        <div className="flex items-center justify-between w-full h-16">
-          {/* Hamburger button */}
-          <div className="flex space-x-4">
-            {/* <button
+    <header className="fixed w-full z-50 transition-colors duration-300 md:hidden">
+      <div className="bg-white/50 backdrop-blur-md backdrop-filter">
+        <div className="max-w-8xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+          {/* Left side - Hamburger and Logo */}
+          <div className="flex items-center">
+            <button
               onClick={toggleMenu}
-              className="text-primary focus:outline-none lg:hidden"
+              className="text-primary focus:outline-none lg:hidden -m-2 touch-manipulation mr-4"
               aria-label="Toggle Menu"
               aria-expanded={menuOpen}
             >
@@ -49,14 +44,15 @@ export default function MobileMenu() {
                   d="M4 6h16M4 12h16m-7 6h7"
                 />
               </svg>
-            </button> */}
+            </button>
             <button
               onClick={toggleMenu}
               aria-label="Toggle Menu"
               aria-expanded={menuOpen}
+              className="touch-manipulation"
             >
               <Image
-                className={`w-24 cursor-pointer`}
+                className="w-24 cursor-pointer"
                 src="/images/logo/logoTransparent.png"
                 width={200}
                 height={200}
@@ -64,14 +60,17 @@ export default function MobileMenu() {
               />
             </button>
           </div>
+
+          {/* Right side - Ticket info */}
           <div className="flex flex-col items-end">
             <span className="text-sm">18th of Sept - 4th of Oct</span>
-            <button className="text-primary underline rounded-md font-accent">
+            <button className="text-primary underline rounded-md font-accent touch-manipulation">
               Get Ticket Now
             </button>
           </div>
         </div>
       </div>
+
       {/* Animated dropdown (mobile only) */}
       <AnimatePresence>
         {menuOpen && (
@@ -82,10 +81,10 @@ export default function MobileMenu() {
             animate={{ y: "0%", opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed flex flex-col top-0 left-0 right-0 w-full lg:hidden z-50 transition-colors duration-300 bg-primary-bg/50 backdrop-blur-md backdrop-filter"
+            className="fixed flex flex-col top-0 left-0 right-0 w-full lg:hidden z-60 transition-colors duration-300 bg-primary-bg/90 backdrop-blur-md backdrop-filter"
           >
             <button
-              className="ml-auto mr-4 mt-4 cursor-pointer font-accent"
+              className="ml-auto mr-4 mt-4 cursor-pointer font-accent p-2 touch-manipulation"
               onClick={toggleMenu}
             >
               CLOSE
@@ -99,7 +98,7 @@ export default function MobileMenu() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </header>
   );
 }
 
