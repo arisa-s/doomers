@@ -121,7 +121,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
         >
           {/* Modal Content */}
           <div
-            className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto shadow-2xl"
+            className="relative bg-white/10 backdrop-blur-sm border border-primary p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}

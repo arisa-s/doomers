@@ -84,7 +84,7 @@ export default function MainLayout({
           <MobileMenu />
           <div className="flex relative z-20">
             <DesktopMenu />
-            <div className="w-full p-6 md:p-20">
+            <div className="w-full p-6 md:p-20 pt-24 md:pt-20">
               <div className="max-w-6xl mx-auto">
                 {pageTitle ? (
                   <div className="md:text-center mb-12 hidden">
