@@ -30,7 +30,7 @@ export default function DesktopMenu() {
 
         <div className="mt-auto space-y-6">
           <div className="flex flex-col items-center space-y-4">
-            <button className="text-primary bg-white/40 mt-auto py-4 px-4 rounded-md font-accent text-xl w-full hover:bg-white/60 transition-colors cursor-pointer">
+            <button className="text-primary underline  mt-auto  font-accent w-full cursor-pointer">
               Get Ticket Now
             </button>
             <span className="text-sm">18th of Sept - 4th of Oct</span>

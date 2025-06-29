@@ -36,9 +36,7 @@ function getFallbackPressItems(): PressQuote[] {
       publication: "The Guardian",
       quote:
         "A play that captures the absurdity of tech's existential hand-wringing while the world burns.",
-      bgColor: "bg-blue-600",
       link: "https://www.theguardian.com",
-      textColor: "text-primary",
       order: 1,
     },
     {
@@ -46,9 +44,7 @@ function getFallbackPressItems(): PressQuote[] {
       publication: "Fortune",
       quote:
         "At times, it's possible for an audience member at Matthew Gasda's play Doomers to feel like a fly on the wall in a San Francisco startup 'war room.'",
-      bgColor: "bg-red-500",
       link: "https://fortune.com",
-      textColor: "text-primary",
       order: 2,
     },
     {
@@ -56,9 +52,7 @@ function getFallbackPressItems(): PressQuote[] {
       publication: "The New York Times",
       quote:
         "Doomers, a new, ripped-from-the-headlines play about the weekend that Sam Altman, the chief executive of the start-up OpenAI, was briefly fired.",
-      bgColor: "bg-gray-800",
       link: "https://www.nytimes.com",
-      textColor: "text-primary",
       order: 3,
     },
     {
@@ -66,9 +60,7 @@ function getFallbackPressItems(): PressQuote[] {
       publication: "Tech Explore",
       quote:
         "Doomers seizes a crucial, high-profile moment in the recent history of AI to turn it into a reflection on its future and on the collision between money, technology, power, and the dream of building a perfect world. Gasda doesn't just dramatize corporate intrigue—he forces the audience to sit with the unsettling reality that the people shaping AI's future may not fully grasp its consequences.",
-      bgColor: "bg-green-600",
       link: "#",
-      textColor: "text-primary",
       order: 4,
     },
     {
@@ -76,9 +68,7 @@ function getFallbackPressItems(): PressQuote[] {
       publication: "Broadway World",
       quote:
         "Philosophical debates, twink lust, and Silicon Valley navel-gazing—Doomers will cover it all. And just as Gasda's players staged Dimes Square in living rooms, they're performing Doomers in tech tycoon-style apartments, offices, and galleries across New York and San Francisco, reflecting the naturalistic (if cringe) habitats of the Silicon Valley elite.",
-      bgColor: "bg-purple-600",
       link: "https://www.broadwayworld.com",
-      textColor: "text-primary",
       order: 5,
     },
   ];

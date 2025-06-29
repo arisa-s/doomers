@@ -19,18 +19,22 @@ export const queries = {
     actor,
     character,
     bio,
-    initials,
-    color,
     profileImage,
     order
+  }`,
+
+  crewMembers: `*[_type == "crewMember"] | order(order asc) {
+    _id,
+    name,
+    role,
+    bio,
+    profileImage,
   }`,
 
   pressQuotes: `*[_type == "pressQuote"] | order(order asc) {
     _id,
     publication,
     quote,
-    bgColor,
-    textColor,
     link,
     order
   }`,
@@ -60,8 +64,6 @@ export interface CastMember {
   actor: string;
   character: string;
   bio: string;
-  initials: string;
-  color: string;
   profileImage?: SanityImageSource;
   order: number;
 }
@@ -70,9 +72,16 @@ export interface PressQuote {
   _id: string;
   publication: string;
   quote: string;
-  bgColor: string;
-  textColor: string;
   link?: string;
+  order: number;
+}
+
+export interface CrewMember {
+  _id: string;
+  name: string;
+  role: string;
+  bio: string;
+  profileImage?: SanityImageSource;
   order: number;
 }
 

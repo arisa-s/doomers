@@ -4,6 +4,7 @@ import { visionTool } from "@sanity/vision";
 
 // Import schemas
 import { castMember } from "./schemas/castMember";
+import { crewMember } from "./schemas/crewMember";
 import { pressQuote } from "./schemas/pressQuote";
 import { readingListItem } from "./schemas/readingListItem";
 
@@ -17,6 +18,6 @@ export default defineConfig({
   plugins: [structureTool(), visionTool()],
 
   schema: {
-    types: [castMember, pressQuote, readingListItem],
+    types: [castMember, crewMember, pressQuote, readingListItem],
   },
 });

@@ -25,7 +25,7 @@ export default function PressGrid({ pressItems }: PressGridProps) {
       {pressItems.map((item, index) => (
         <div key={item._id} className="perspective-1000">
           <div
-            className={`relative w-full h-56 md:h-80 cursor-pointer transform-style-preserve-3d transition-transform duration-700 ${
+            className={`relative w-full h-56 md:h-90 cursor-pointer transform-style-preserve-3d transition-transform duration-700 ${
               flippedCards.has(index) ? "rotate-y-180" : ""
             }`}
             onMouseEnter={() => toggleFlip(index, true)}
@@ -36,19 +36,17 @@ export default function PressGrid({ pressItems }: PressGridProps) {
               className={`absolute inset-0 backdrop-blur-sm bg-white/20 p-6 flex flex-col items-center justify-center backface-hidden`}
             >
               <div className="text-center">
-                <h3
-                  className={`text-lg md:text-2xl font-bold ${item.textColor} mb-4`}
-                >
+                <h3 className={`text-lg md:text-2xl font-bold mb-4`}>
                   {item.publication}
                 </h3>
                 <div
-                  className={`w-16 h-1 ${item.textColor} bg-current mx-auto mb-4 opacity-60`}
+                  className={`w-16 h-1  bg-current mx-auto mb-4 opacity-60`}
                 ></div>
               </div>
             </div>
 
             {/* Back of Card */}
-            <div className="absolute inset-0 bg-secondary/90 backdrop-blur-lg p-6 flex flex-col justify-center backface-hidden rotate-y-180">
+            <div className="text-base absolute inset-0 bg-secondary/90 backdrop-blur-lg p-6 flex flex-col justify-center backface-hidden rotate-y-180">
               <div className="text-center">
                 <blockquote className="text-primary leading-relaxed mb-4">
                   &ldquo;{item.quote}&rdquo;
@@ -64,7 +62,7 @@ export default function PressGrid({ pressItems }: PressGridProps) {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`absolute top-4 right-4 ${item.textColor} opacity-60 hover:opacity-100 transition-opacity`}
+                  className={`absolute top-4 right-4 opacity-60 hover:opacity-100 transition-opacity`}
                   onClick={(e) => e.stopPropagation()}
                 >
                   <svg

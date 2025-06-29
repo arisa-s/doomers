@@ -1,19 +1,19 @@
 import { defineField, defineType } from "sanity";
 
-export const castMember = defineType({
-  name: "castMember",
-  title: "Cast Member",
+export const crewMember = defineType({
+  name: "crewMember",
+  title: "Crew Member",
   type: "document",
   fields: [
     defineField({
-      name: "actor",
-      title: "Actor Name",
+      name: "name",
+      title: "Name",
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "character",
-      title: "Character Name",
+      name: "role",
+      title: "Role/Position",
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
@@ -47,8 +47,8 @@ export const castMember = defineType({
   ],
   preview: {
     select: {
-      title: "actor",
-      subtitle: "character",
+      title: "name",
+      subtitle: "role",
       media: "profileImage",
     },
   },

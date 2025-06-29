@@ -183,8 +183,16 @@ export default async function ReadingList() {
           <SectionTitle title="Books" />
           <div className="space-y-4">
             {books.map((book) => (
-              <div key={book._id} className="text-primary text-sm md:text-lg">
-                {book.title}
+              <div key={book._id}>
+                <a
+                  key={book._id}
+                  href={book.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary text-sm md:text-lg cursor-pointer hover:text-accent hover:underline"
+                >
+                  {book.title} by {book.author}
+                </a>
               </div>
             ))}
           </div>
@@ -195,16 +203,15 @@ export default async function ReadingList() {
           <SectionTitle title="Articles" />
           <div className="space-y-4">
             {articles.map((article) => (
-              <div
-                key={article._id}
-                className="text-primary text-sm md:text-lg"
-              >
-                <span className="block">{article.title}</span>
-                {article.author && (
-                  <span className="text-primary/60 text-xs md:text-sm">
-                    by {article.author}
-                  </span>
-                )}
+              <div key={article._id}>
+                <a
+                  href={article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary text-sm md:text-lg cursor-pointer hover:text-accent hover:underline"
+                >
+                  {article.title} by {article.author}
+                </a>
               </div>
             ))}
           </div>
