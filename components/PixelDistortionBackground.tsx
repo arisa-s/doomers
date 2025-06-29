@@ -41,7 +41,7 @@ interface PixelDistortionBackgroundProps {
 export default function PixelDistortionBackground({
   imageSrc,
   className = "",
-  distortionStrength = 50,
+  distortionStrength = 15,
   mouseRadius = 0.15,
   relaxationSpeed = 0.05,
 }: PixelDistortionBackgroundProps) {
@@ -228,8 +228,8 @@ export default function PixelDistortionBackground({
       }
       mouse.x = clientX / window.innerWidth;
       mouse.y = 1.0 - clientY / window.innerHeight;
-      mouse.vX = mouse.x - lastMouseX;
-      mouse.vY = mouse.y - lastMouseY;
+      mouse.vX = Math.max(-0.02, Math.min(0.02, mouse.x - lastMouseX));
+      mouse.vY = Math.max(-0.02, Math.min(0.02, mouse.y - lastMouseY));
       lastMouseX = mouse.x;
       lastMouseY = mouse.y;
     };
