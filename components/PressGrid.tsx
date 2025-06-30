@@ -48,7 +48,7 @@ export default function PressGrid({ pressItems }: PressGridProps) {
             {/* Back of Card */}
             <div className="text-base absolute inset-0 bg-secondary/90 backdrop-blur-lg p-6 flex flex-col justify-center backface-hidden rotate-y-180">
               <div className="text-center">
-                <blockquote className="text-primary leading-relaxed mb-4">
+                <blockquote className="text-primary leading-tight mb-4">
                   &ldquo;{item.quote}&rdquo;
                 </blockquote>
                 <cite className="text-accent font-medium">

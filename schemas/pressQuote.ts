@@ -18,6 +18,14 @@ export const pressQuote = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "logoImage",
+      title: "Logo Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: "link",
       title: "Publication Link",
       type: "url",
@@ -48,7 +56,7 @@ export const pressQuote = defineType({
     prepare({ title, subtitle }) {
       return {
         title,
-        subtitle: subtitle ? `${subtitle.slice(0, 50)}...` : "",
+        subtitle: subtitle,
       };
     },
   },

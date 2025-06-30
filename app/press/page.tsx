@@ -35,7 +35,7 @@ function getFallbackPressItems(): PressQuote[] {
       _id: "temp-1",
       publication: "The Guardian",
       quote:
-        "A play that captures the absurdity of tech's existential hand-wringing while the world burns.",
+        "A play that captures the absurdity of tech's existential hand-wringing while the world burns. ",
       link: "https://www.theguardian.com",
       order: 1,
     },

@@ -96,7 +96,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 gap-6 mx-auto max-w-3xl items-center justify-center justify-content-center self-center">
           {crewMembers.map((member) => (
             <div
               key={member._id}

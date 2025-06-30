@@ -31,7 +31,7 @@ export default function DesktopMenu() {
 
         <div className="mt-auto space-y-6">
           <div className="flex flex-col items-center space-y-4">
-            <button className="text-white py-2 px-6 mt-auto bg-[#8E3823] font-accent w-full cursor-pointer uppercase">
+            <button className="text-white/90 py-2 px-6 mt-auto bg-[#8E3823] font-accent w-full cursor-pointer uppercase">
               Get Ticket Now
             </button>
           </div>

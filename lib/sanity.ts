@@ -33,6 +33,7 @@ export const queries = {
     _id,
     publication,
     quote,
+    logoImage,
     link,
     order
   }`,
@@ -70,6 +71,7 @@ export interface PressQuote {
   _id: string;
   publication: string;
   quote: string;
+  logoImage?: SanityImageSource;
   link?: string;
   order: number;
 }

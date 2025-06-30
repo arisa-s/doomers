@@ -30,6 +30,7 @@
   --sam-altman-beige: #FBE0C2;
   --absolute-black: #000000;
   --oxide-brown: #8E3823;
+  --neon-green: #03FF00;
 
   /* ---------------------
      Text color variables
@@ -48,6 +49,7 @@
      ------------------------ */
   --bg-primary: var(--blue-smoke);
   --bg-secondary: var(--sam-altman-beige);
+  --bg-accent: var(var(--neon-green));
   
   /* ---------------------
      Border color variables
@@ -97,6 +99,9 @@
   background-color: var(--bg-secondary);
 }
 
+@utility bg-accent {
+  background-color: var(--bg-accent);
+}
 @utility border-primary {
   border-color: var(--border-primary);
 }
@@ -104,6 +109,7 @@
 @utility border-secondary {
   border-color: var(--border-secondary);
 }
+
 
 @utility font-accent {
   font-family: var(--font-coolvetica);
