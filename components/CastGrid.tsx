@@ -86,7 +86,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
                 )}
 
                 <div className="">
-                  <h3 className="text-lg font-accent text-accent font-bold">
+                  <h3 className="text-lg font-accent text-accent font-bold uppercase">
                     {member.actor}
                   </h3>
                   <p className="text-primary font-medium">{member.character}</p>
@@ -96,7 +96,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {crewMembers.map((member) => (
             <div
               key={member._id}
@@ -106,8 +106,9 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
               <h3 className="text-xl font-accent text-accent mb-2">
                 {member.role}
               </h3>
-              <p className="text-primary font-medium mb-2">{member.name}</p>
-              <p className="text-primary text-sm line-clamp-3">{member.bio}</p>
+              <p className="text-primary font-medium mb-2 uppercase">
+                {member.name}
+              </p>
             </div>
           ))}
         </div>
@@ -137,7 +138,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
               {selectedCast ? (
                 <>
                   {/* Actor Name */}
-                  <h2 className="text-lg font-accent text-accent mb-2">
+                  <h2 className="text-lg font-accent text-accent mb-2 uppercase">
                     {selectedCast.actor}
                   </h2>
                   {/* Character */}
@@ -159,10 +160,6 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
                   <h3 className="text-md text-primary/80 mb-4">
                     {selectedCrew.role}
                   </h3>
-                  {/* Bio */}
-                  <p className="text-primary leading-relaxed">
-                    {selectedCrew.bio}
-                  </p>
                 </>
               ) : null}
             </div>

@@ -15,16 +15,16 @@ export default function Home() {
       backgroundImage="url('/images/hands/handsTwo.png')"
       pageTitle="/"
     >
-      <div className="space-y-12 items-center justify-center text-right mt-12">
-        <p className="text-primary leading-relaxed">
-          In humanyty&apos;s last act, who plays god?
+      <div className="space-y-12 items-center justify-center text-right mt-12 md:text-2xl max-w-4xl ml-auto">
+        <p className="text-primary leading-relaxed italic">
+          In humany&apos;s last act, who plays god?
         </p>
 
         {/* Main content sections */}
         <section>
           <p className="text-primary leading-relaxed mb-4">
-            <span className="font-accent text-accent">DOOMERS</span> is a
-            razor-sharp reflection of our accelerating world, where tech,
+            <span className="font-accent text-accent uppercase">DOOMERS</span>{" "}
+            is a razor-sharp reflection of our accelerating world, where tech,
             ethics, and ego collide. It&apos;s about the thrill of creation, the
             fear of losing control, and the uneasy realization that the future
             might already be slipping from our grasp. A provocative and deeply
@@ -34,10 +34,12 @@ export default function Home() {
         </section>
         <section>
           <p className="text-primary leading-relaxed mb-4">
-            <span className="font-accent text-accent">Matthew Gasda</span> has
-            emerged as one of New York&apos;s most innovative theatrical voices,
-            creating immersive productions that transform unconventional spaces
-            into intimate stages for contemporary drama. As
+            <span className="font-accent text-accent uppercase">
+              Matthew Gasda
+            </span>{" "}
+            has emerged as one of New York&apos;s most innovative theatrical
+            voices, creating immersive productions that transform unconventional
+            spaces into intimate stages for contemporary drama. As
             playwright-in-residence at the Brooklyn Center for Theater Research,
             which he co-founded, Gasda has garnered attention for works like
             &quot;Dimes Square&quot; (2022) and &quot;Zoomers&quot; (2023)—plays

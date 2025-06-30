@@ -18,20 +18,6 @@ export const crewMember = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "bio",
-      title: "Biography",
-      type: "text",
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: "profileImage",
-      title: "Profile Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
       name: "order",
       title: "Display Order",
       type: "number",

@@ -26,9 +26,7 @@ export const queries = {
   crewMembers: `*[_type == "crewMember"] | order(order asc) {
     _id,
     name,
-    role,
-    bio,
-    profileImage,
+    role
   }`,
 
   pressQuotes: `*[_type == "pressQuote"] | order(order asc) {
@@ -80,8 +78,6 @@ export interface CrewMember {
   _id: string;
   name: string;
   role: string;
-  bio: string;
-  profileImage?: SanityImageSource;
   order: number;
 }
 

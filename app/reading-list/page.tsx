@@ -160,7 +160,7 @@ export default async function ReadingList() {
                 key={talk._id}
                 className="border-b border-primary pb-1 md:pb-2"
               >
-                <h3 className="text-sm md:text-lg text-primary mb-1 md:mb-2 leading-relaxed">
+                <h3 className="text-sm md:text-2xl text-primary mb-1 md:mb-2 leading-relaxed">
                   {talk.title}
                 </h3>
                 {talk.link && (
@@ -189,9 +189,10 @@ export default async function ReadingList() {
                   href={book.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary text-sm md:text-lg cursor-pointer hover:text-accent hover:underline"
+                  className="text-primary text-sm md:text-2xl cursor-pointer hover:text-accent hover:underline"
                 >
-                  {book.title} by {book.author}
+                  <span className="italic">{book.title}</span>
+                  by {book.author}
                 </a>
               </div>
             ))}
@@ -208,9 +209,10 @@ export default async function ReadingList() {
                   href={article.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary text-sm md:text-lg cursor-pointer hover:text-accent hover:underline"
+                  className="text-primary text-sm md:text-2xl cursor-pointer hover:text-accent hover:underline"
                 >
-                  {article.title} by {article.author}
+                  <span className="italic">{article.title}</span>
+                  by {article.author}
                 </a>
               </div>
             ))}
