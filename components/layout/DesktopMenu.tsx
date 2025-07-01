@@ -3,12 +3,20 @@ import { LINKS } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function DesktopMenu() {
+export default function DesktopMenu({
+  accentColor = "#8E3823",
+}: {
+  accentColor?: string;
+}) {
+  console.log({ accentColor });
   return (
     <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-white/20 backdrop-blur-xl backdrop-saturate-150 z-20 border-primary hidden md:block shadow-2xl">
       <div className="px-8 py-16 flex flex-col h-full">
         <Link href="/">
-          <h1 className="text-5xl tracking-tighter font-accent text-black/50 ">
+          <h1
+            className={`text-5xl tracking-tighter font-accent`}
+            style={{ color: accentColor }}
+          >
             Doomers
           </h1>
         </Link>
@@ -26,7 +34,10 @@ export default function DesktopMenu() {
 
         <div className="mt-auto space-y-6">
           <div className="flex flex-col items-center space-y-4">
-            <button className="text-white/90 py-2 px-6 mt-auto bg-[#8E3823] font-accent w-full cursor-pointer uppercase">
+            <button
+              className={`text-white/90 py-2 px-6 mt-auto bg-[${accentColor}] font-accent w-full cursor-pointer uppercase`}
+              style={{ backgroundColor: accentColor }}
+            >
               Get Ticket Now
             </button>
           </div>

@@ -11,6 +11,7 @@ interface MainLayoutProps {
   children: React.ReactNode;
   backgroundImage: string;
   pageTitle?: string;
+  accentColor?: string;
 }
 
 // Helper function to extract URL from CSS background-image string
@@ -34,6 +35,7 @@ export default function MainLayout({
   children,
   backgroundImage,
   pageTitle,
+  accentColor,
 }: MainLayoutProps) {
   // Extract the actual image URL from the CSS background-image string
   const imageUrl = extractImageUrl(backgroundImage);
@@ -83,7 +85,7 @@ export default function MainLayout({
         <div className="min-h-screen flex-col text-sm md:text-lg relative z-10">
           <MobileMenu />
           <div className="flex relative z-20">
-            <DesktopMenu />
+            <DesktopMenu accentColor={accentColor} />
             <div className="w-full p-6 md:p-20 pt-24 md:pt-20">
               <div className="max-w-6xl mx-auto">
                 {pageTitle ? (
