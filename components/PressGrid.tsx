@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 import { PressQuote } from "@/lib/sanity";
+import imageUrlBuilder from "@sanity/image-url";
+import { Image } from "next-sanity/image";
+import { client } from "@/lib/sanity";
 
+const builder = imageUrlBuilder(client);
 interface PressGridProps {
   pressItems: PressQuote[];
 }
@@ -36,12 +40,25 @@ export default function PressGrid({ pressItems }: PressGridProps) {
               className={`absolute inset-0 backdrop-blur-sm bg-white/20 p-6 flex flex-col items-center justify-center backface-hidden`}
             >
               <div className="text-center">
-                <h3 className={`text-lg md:text-2xl font-bold mb-4`}>
-                  {item.publication}
-                </h3>
-                <div
-                  className={`w-16 h-1  bg-current mx-auto mb-4 opacity-60`}
-                ></div>
+                {item.logoImage ? (
+                  <div className="md:m-10">
+                    <Image
+                      src={builder
+                        .image(item.logoImage)
+                        .width(500)
+                        .height(500)
+                        .url()}
+                      alt={`${item.publication} logo`}
+                      width={500}
+                      height={500}
+                      // className="p-6 md:p-20"
+                    />
+                  </div>
+                ) : (
+                  <h3 className={`text-lg md:text-2xl font-bold mb-4`}>
+                    {item.publication}
+                  </h3>
+                )}
               </div>
             </div>
 

@@ -1,6 +1,5 @@
 "use client";
 import { LINKS } from "@/constants";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,13 +8,9 @@ export default function DesktopMenu() {
     <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-white/20 backdrop-blur-xl backdrop-saturate-150 z-20 border-primary hidden md:block shadow-2xl">
       <div className="px-8 py-16 flex flex-col h-full">
         <Link href="/">
-          <Image
-            src="/images/logo/logoTransparent.png"
-            alt="DOOMERS"
-            width={800}
-            height={800}
-            className="h-auto mr-auto max-w-42"
-          />
+          <h1 className="text-5xl tracking-tighter font-accent text-black/50 ">
+            Doomers
+          </h1>
         </Link>
         <span className="text-sm mt-6 italic">18th of Sept - 4th of Oct</span>
 
