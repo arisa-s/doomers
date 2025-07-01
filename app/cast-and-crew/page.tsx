@@ -100,14 +100,12 @@ function getFallbackCrewMembers(): CrewMember[] {
       _id: "temp-crew-1",
       name: "Matthew Gasda",
       role: "Playwright & Director",
-      bio: "Matthew Gasda has emerged as one of New York's most innovative theatrical voices, creating immersive productions that transform unconventional spaces into intimate stages for contemporary drama.",
       order: 1,
     },
     {
       _id: "temp-crew-2",
       name: "Brooklyn Center for Theater Research",
       role: "Producer",
-      bio: "Co-founded by Matthew Gasda, BCTR produces innovative theatrical works that push the boundaries of contemporary drama and explore pressing social issues.",
       order: 2,
     },
   ];
