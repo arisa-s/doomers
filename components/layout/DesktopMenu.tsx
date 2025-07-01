@@ -12,7 +12,7 @@ export default function DesktopMenu() {
             Doomers
           </h1>
         </Link>
-        <span className="text-sm mt-6 italic">18th of Sept - 4th of Oct</span>
+        <span className="text-sm mt-3 italic">18th of Sept - 4th of Oct</span>
 
         <nav className="space-y-4 mt-12">
           <ul className="">
