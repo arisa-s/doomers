@@ -25,7 +25,7 @@ export default function PressGrid({ pressItems }: PressGridProps) {
   };
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-16 my-6">
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16 my-6">
       {pressItems.map((item, index) => (
         <div key={item._id} className="perspective-1000">
           <div
@@ -41,7 +41,7 @@ export default function PressGrid({ pressItems }: PressGridProps) {
             >
               <div className="text-center">
                 {item.logoImage ? (
-                  <div className="md:m-10">
+                  <div className="m-6 lg:m-16">
                     <Image
                       src={builder
                         .image(item.logoImage)
@@ -63,9 +63,9 @@ export default function PressGrid({ pressItems }: PressGridProps) {
             </div>
 
             {/* Back of Card */}
-            <div className="text-base absolute inset-0 bg-secondary/90 backdrop-blur-lg p-6 flex flex-col justify-center backface-hidden rotate-y-180">
+            <div className="text-sm md:text-base absolute inset-0 bg-secondary/90 backdrop-blur-lg p-6 flex flex-col justify-center backface-hidden rotate-y-180">
               <div className="text-center">
-                <blockquote className="text-primary leading-tight mb-4">
+                <blockquote className="text-primary leading-tight mb-4 line-clamp-6 md:line-clamp-none">
                   &ldquo;{item.quote}&rdquo;
                 </blockquote>
                 <cite className="text-accent font-medium">
