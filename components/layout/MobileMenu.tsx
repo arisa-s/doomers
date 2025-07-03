@@ -63,9 +63,9 @@ export default function MobileMenu() {
 
           {/* Right side - Ticket info */}
           <div className="flex flex-col items-end">
-            <span className="text-sm">18th of Sept - 4th of Oct</span>
+            <span className="text-sm">18 Sept - 4 Oct</span>
             <button className="text-primary underline rounded-md font-accent touch-manipulation">
-              Get Ticket Now
+              Get Tickets Now
             </button>
           </div>
         </div>

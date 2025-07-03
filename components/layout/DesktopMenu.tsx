@@ -19,7 +19,7 @@ export default function DesktopMenu({
             Doomers
           </h1>
         </Link>
-        <span className="text-sm mt-3 italic">18th of Sept - 4th of Oct</span>
+        <span className="text-sm mt-3">18 Sept - 4 Oct</span>
 
         <nav className="space-y-4 mt-12">
           <ul className="">
@@ -37,7 +37,7 @@ export default function DesktopMenu({
               className={`text-white/90 py-2 px-6 mt-auto bg-[${accentColor}] font-accent w-full cursor-pointer uppercase`}
               style={{ backgroundColor: accentColor }}
             >
-              Get Ticket Now
+              Get Tickets Now
             </button>
           </div>
 

@@ -158,9 +158,9 @@ export default async function ReadingList() {
             {talks.map((talk) => (
               <div
                 key={talk._id}
-                className="border-b border-primary pb-1 md:pb-2"
+                className="border-b border-primary pb-1 md:pb-2 hover:text-accent hover:underline"
               >
-                <h3 className="text-sm md:text-2xl text-primary mb-1 md:mb-2 leading-relaxed">
+                <h3 className="text-sm md:text-2xl mb-1 md:mb-2 leading-relaxed uppercase text-primary">
                   {talk.title}
                 </h3>
                 {talk.link && (
@@ -191,7 +191,7 @@ export default async function ReadingList() {
                   rel="noopener noreferrer"
                   className="text-primary text-sm md:text-2xl cursor-pointer hover:text-accent hover:underline"
                 >
-                  <span className="italic">{book.title}</span>
+                  <span className="italic uppercase">{book.title} </span>
                   by {book.author}
                 </a>
               </div>
@@ -211,7 +211,7 @@ export default async function ReadingList() {
                   rel="noopener noreferrer"
                   className="text-primary text-sm md:text-2xl cursor-pointer hover:text-accent hover:underline"
                 >
-                  <span className="italic">{article.title}</span>
+                  <span className="italic uppercase">{article.title} </span>
                   by {article.author}
                 </a>
               </div>

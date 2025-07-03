@@ -44,13 +44,13 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
           isActive={currentPanel === "cast"}
           onClick={() => setCurrentPanel("cast")}
         >
-          Cast
+          CAST
         </ToggleButton>
         <ToggleButton
           isActive={currentPanel === "crew"}
           onClick={() => setCurrentPanel("crew")}
         >
-          Crew
+          CREW
         </ToggleButton>
       </div>
 
