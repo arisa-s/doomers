@@ -1,7 +1,6 @@
 import { LINKS } from "@/constants";
 import { useClickOutside } from "@/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
