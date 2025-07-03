@@ -45,26 +45,24 @@ export default function MobileMenu() {
                 />
               </svg>
             </button>
-            <button
-              onClick={toggleMenu}
-              aria-label="Toggle Menu"
-              aria-expanded={menuOpen}
-              className="touch-manipulation"
-            >
-              <Image
-                className="w-24 cursor-pointer"
-                src="/images/logo/logoTransparent.png"
-                width={200}
-                height={200}
-                alt="Doomers"
-              />
-            </button>
+            <div className="flex flex-col -space-y-1">
+              <button
+                onClick={toggleMenu}
+                aria-label="Toggle Menu"
+                aria-expanded={menuOpen}
+                className="touch-manipulation"
+              >
+                <h1 className="text-3xl font-accent tracking-tighter text-accent ">
+                  Doomers
+                </h1>
+              </button>
+              <span className="text-xs">18 Sept - 4 Oct</span>
+            </div>
           </div>
 
           {/* Right side - Ticket info */}
           <div className="flex flex-col items-end">
-            <span className="text-sm">18 Sept - 4 Oct</span>
-            <button className="text-primary underline rounded-md font-accent touch-manipulation">
+            <button className="text-white/90 bg-accent px-2 py-1  font-accent touch-manipulation">
               Get Tickets Now
             </button>
           </div>
