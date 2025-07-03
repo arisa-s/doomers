@@ -90,7 +90,7 @@ export default function MainLayout({
               <div className="max-w-6xl mx-auto">
                 {pageTitle ? (
                   <div className="md:text-center mb-12 hidden">
-                    <h1 className="text-lg md:text-2xl font-accent text-accents mb-4">
+                    <h1 className="text-lg md:text-2xl font-accent text-accent mb-4">
                       {pageTitle}
                     </h1>
                   </div>

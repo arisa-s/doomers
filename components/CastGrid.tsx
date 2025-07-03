@@ -60,7 +60,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
             <div
               key={member._id}
               onClick={() => openCastModal(member)}
-              className="bg-secondary/30 hover:bg-secondary/40 transition-all duration-300 cursor-pointer hover:scale-105"
+              className="transition-all duration-300 cursor-pointer hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
                 {member.profileImage ? (
@@ -101,7 +101,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
             <div
               key={member._id}
               onClick={() => openCrewModal(member)}
-              className="bg-secondary/50 md:p-6 rounded-lg cursor-pointer hover:bg-secondary/60 transition-all duration-300"
+              className="md:p-6 rounded-lg cursor-pointer transition-all duration-300"
             >
               <h3 className="text-xl font-accent text-accent mb-2">
                 {member.role}
@@ -122,7 +122,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
         >
           {/* Modal Content */}
           <div
-            className="relative bg-white/10 backdrop-blur-sm border border-primary p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto shadow-2xl"
+            className="relative  backdrop-blur-sm border border-primary p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}

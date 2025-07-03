@@ -19,104 +19,48 @@
   --font-size-7xl: 3.75rem;
   --font-size-8xl: 4.5rem;
   --font-size-9xl: 6rem;
+
+  /* Custom colors */
+  --color-primary: #000000;
+  --color-accent: #8E3823;
+  --color-secondary: #3a3a3a;
+  --color-tertiary: #555555;
+  --color-dimmed: #777777;
+  --color-link: #0645ad;
+  --color-invert: #ffffff;
+  --color-muted: #777777;
+
+  /* Background colors */
+  --color-primary-bg: #9FB0BC;
+  --color-secondary-bg: #FBE0C2;
+  --color-accent-bg: #03FF00;
 }
 
-/* Custom CSS variables for your design system */
+/* CSS variables for fonts (still needed for font-accent/font-base utilities) */
 :root {
   --font-coolvetica: "Coolvetica", sans-serif;
   --font-times-new-roman: "Times New Roman", serif;
-
-  --blue-smoke: #9FB0BC;
-  --sam-altman-beige: #FBE0C2;
-  --absolute-black: #000000;
-  --oxide-brown: #8E3823;
-  --neon-green: #03FF00;
-
-  /* ---------------------
-     Text color variables
-     --------------------- */
-  --text-primary: var(--absolute-black);
-  --text-accent: var(--oxide-brown);
-  --text-secondary: #3a3a3a;
-  --text-tertiary: #555555;
-  --text-dimmed: #777777;
-  --text-link: #0645ad;
-  --text-invert: #ffffff;
-  --text-muted: #777777;
-
-  /* ------------------------
-     Background color variables
-     ------------------------ */
-  --bg-primary: var(--blue-smoke);
-  --bg-secondary: var(--sam-altman-beige);
-  --bg-accent: var(var(--neon-green));
-  
-  /* ---------------------
-     Border color variables
-     --------------------- */
-  --border-primary: var(--oxide-brown);
-  --border-secondary: #888888;
 }
 
-/* Custom utility classes for your design system */
-@utility text-primary {
-  color: var(--text-primary);
-}
-
-@utility text-accent {
-  color: var(--text-accent);
-}
-
-@utility text-secondary {
-  color: var(--text-secondary);
-}
-
-@utility text-tertiary {
-  color: var(--text-tertiary);
-}
-
-@utility text-dimmed {
-  color: var(--text-dimmed);
-}
-
-@utility text-link {
-  color: var(--text-link);
-}
-
-@utility text-invert {
-  color: var(--text-invert);
-}
-
-@utility text-muted {
-  color: var(--text-muted);
-}
-
-@utility bg-primary {
-  background-color: var(--bg-primary);
-}
-
-@utility bg-secondary {
-  background-color: var(--bg-secondary);
-}
-
-@utility bg-accent {
-  background-color: var(--bg-accent);
-}
-@utility border-primary {
-  border-color: var(--border-primary);
-}
-
-@utility border-secondary {
-  border-color: var(--border-secondary);
-}
-
-
+/* Custom utility classes that aren't auto-generated */
 @utility font-accent {
   font-family: var(--font-coolvetica);
 }
 
 @utility font-base {
   font-family: var(--font-times-new-roman);
+}
+
+@utility bg-primary-bg {
+  background-color: var(--color-primary-bg);
+}
+
+@utility bg-secondary-bg {
+  background-color: var(--color-secondary-bg);
+}
+
+@utility bg-accent-bg {
+  background-color: var(--color-accent-bg);
 }
 
 /* 3D Flip Animation Utilities */
@@ -139,7 +83,7 @@
 /* Apply "primary" as the default text and background for body */
 body {
   font-family: var(--font-times-new-roman);
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary);
   font-size: 0.75rem;
 }
