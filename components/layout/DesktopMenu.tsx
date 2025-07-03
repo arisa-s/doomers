@@ -8,7 +8,6 @@ export default function DesktopMenu({
 }: {
   accentColor?: string;
 }) {
-  console.log({ accentColor });
   return (
     <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-white/20 backdrop-blur-xl backdrop-saturate-150 z-20 border-primary hidden md:block shadow-2xl">
       <div className="px-8 py-16 flex flex-col h-full">
