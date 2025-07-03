@@ -29,7 +29,7 @@ export default function Home() {
             fear of losing control, and the uneasy realization that the future
             might already be slipping from our grasp. A provocative and deeply
             human drama, Doomers asks: can we survive the technologies
-            we&apos;ve unleashed? And should we even want to?
+            we&apos;ve unleashed? And should we even want&nbsp;to?
           </p>
         </section>
         <section>
@@ -48,12 +48,12 @@ export default function Home() {
             generations. His latest work, &quot;Doomers&quot; (2024), tackles
             the cultural and philosophical implications of artificial
             intelligence, demonstrating his ability to capture watershed moments
-            in contemporary society.
+            in contemporary&nbsp;society.
           </p>
         </section>
       </div>
-      <div className="mt-24 flex space-x-4 justify-end md:hidden">
-        {LINKS.map((link) => (
+      <div className="mt-24 flex space-x-3 justify-end md:hidden">
+        {LINKS.filter((link) => link.href !== "/").map((link) => (
           <PageLink key={link.href} href={link.href} label={link.label} />
         ))}
       </div>
@@ -64,7 +64,7 @@ export default function Home() {
 const PageLink = ({ href, label }: { href: string; label: string }) => {
   return (
     <Link href={href}>
-      <span className="text-primary underline">{label}</span>
+      <span className="text-primary underline whitespace-nowrap">{label}</span>
     </Link>
   );
 };
