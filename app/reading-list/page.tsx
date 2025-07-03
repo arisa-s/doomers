@@ -158,9 +158,9 @@ export default async function ReadingList() {
             {talks.map((talk) => (
               <div
                 key={talk._id}
-                className="border-b border-primary pb-1 md:pb-2 hover:text-accent hover:underline"
+                className="border-b border-accent pb-1 md:pb-2 hover:text-accent cursor-pointer"
               >
-                <h3 className="text-sm md:text-2xl mb-1 md:mb-2 leading-relaxed uppercase text-primary">
+                <h3 className="text-sm md:text-2xl mb-1 md:mb-2 leading-relaxed uppercase text-primary hover:text-accent">
                   {talk.title}
                 </h3>
                 {talk.link && (
@@ -168,7 +168,7 @@ export default async function ReadingList() {
                     href={talk.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-accent hover:underline text-sm"
+                    className="text-accent text-sm"
                   >
                     Watch →
                   </a>
@@ -189,7 +189,7 @@ export default async function ReadingList() {
                   href={book.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary text-sm md:text-2xl cursor-pointer hover:text-accent hover:underline"
+                  className="text-primary text-sm md:text-2xl cursor-pointer hover:text-accent"
                 >
                   <span className="italic uppercase">{book.title} </span>
                   by {book.author}
@@ -209,7 +209,7 @@ export default async function ReadingList() {
                   href={article.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary text-sm md:text-2xl cursor-pointer hover:text-accent hover:underline"
+                  className="text-primary text-sm md:text-2xl cursor-pointer hover:text-accent"
                 >
                   <span className="italic uppercase">{article.title} </span>
                   by {article.author}

@@ -9,7 +9,7 @@ export default function DesktopMenu({
   accentColor?: string;
 }) {
   return (
-    <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-white/20 backdrop-blur-xl backdrop-saturate-150 z-20 border-primary hidden md:block shadow-2xl">
+    <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-white/20 backdrop-blur-xl backdrop-saturate-150 z-20 border-accent hidden md:block shadow-2xl">
       <div className="px-8 py-16 flex flex-col h-full">
         <Link href="/">
           <h1
@@ -41,7 +41,7 @@ export default function DesktopMenu({
             </button>
           </div>
 
-          <div className="mt-auto border-t border-primary pt-4">
+          <div className="mt-auto border-t border-accent pt-4">
             <h3 className="text-lg font-accent text-accent mb-4 uppercase">
               Contacts
             </h3>

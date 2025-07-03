@@ -14,7 +14,7 @@ export default function LoadingReadingList() {
           </div>
           <div className="space-y-4 md:space-y-6">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="border-b border-primary pb-1 md:pb-2">
+              <div key={i} className="border-b border-accent pb-1 md:pb-2">
                 <div className="h-5 bg-primary/20 rounded mb-1 md:mb-2 animate-pulse"></div>
                 <div className="h-4 bg-accent/20 rounded w-16 animate-pulse"></div>
               </div>
