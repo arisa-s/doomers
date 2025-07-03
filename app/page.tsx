@@ -15,7 +15,7 @@ export default function Home() {
       backgroundImage="url('/images/hands/handsTwo.png')"
       pageTitle="/"
     >
-      <div className="space-y-12 items-center justify-center text-right mt-12 md:text-3xl lg:text-5xl max-w-5xl ml-auto">
+      <div className="space-y-12 items-center justify-center text-right mt-12 text-xl md:text-3xl lg:text-5xl max-w-5xl ml-auto">
         <p className="text-accent leading-relaxed italic">
           In humanity&apos;s last act, who plays god?
         </p>
