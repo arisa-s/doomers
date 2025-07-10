@@ -9,19 +9,19 @@ export default function DesktopMenu({
   accentColor?: string;
 }) {
   return (
-    <div className="sticky top-0 w-80 h-screen overflow-y-auto bg-white/20 backdrop-blur-xl backdrop-saturate-150 z-20 border-accent hidden md:block shadow-2xl">
+    <div className="sticky top-0 w-96 h-screen overflow-y-auto bg-white/20 backdrop-blur-xl backdrop-saturate-150 z-20 border-accent hidden md:block shadow-2xl">
       <div className="px-8 py-16 flex flex-col h-full">
         <Link href="/">
           <h1
-            className={`text-5xl tracking-tighter font-accent`}
+            className={`text-[68px] tracking-tighter font-accent`}
             style={{ color: accentColor }}
           >
             Doomers
           </h1>
         </Link>
-        <span className="text-sm mt-3">18 Sept - 4 Oct</span>
+        <span className="text -mt-4">18 Sept - 4 Oct</span>
 
-        <nav className="space-y-4 mt-12">
+        <nav className="mt-24">
           <ul className="">
             {LINKS.map((link) => (
               <MenuItem key={link.href} href={link.href}>
@@ -34,7 +34,7 @@ export default function DesktopMenu({
         <div className="mt-auto space-y-6">
           <div className="flex flex-col items-center space-y-4">
             <button
-              className={`text-white/90 py-2 px-6 mt-auto bg-[${accentColor}] font-accent w-full cursor-pointer uppercase`}
+              className={`mb-4 text-white/90 py-2 px-7 mt-auto bg-[${accentColor}] font-accent w-full cursor-pointer uppercase`}
               style={{ backgroundColor: accentColor }}
             >
               Get Tickets Now
@@ -42,24 +42,22 @@ export default function DesktopMenu({
           </div>
 
           <div className="mt-auto border-t border-accent pt-4">
-            <h3 className="text-lg font-accent text-accent mb-4 uppercase">
-              Contacts
-            </h3>
+            <h3 className="text-lg  text-accent mb-4 uppercase">Contacts</h3>
 
             <div className="text-sm">
               <a
                 href="https://www.instagram.com/doomers.uk/"
                 target="_blank"
-                className="block py-1 text-primary transition-colors"
+                className="block text-primary transition-colors"
               >
-                Instagram: @doomersuk
+                <label className="font-bold">Instagram:</label> @doomersuk
               </a>
               <a
                 href="mailto:doomersuk@gmail.com"
                 target="_blank"
-                className="block py-1 text-primary transition-colors"
+                className="block text-primary transition-colors"
               >
-                Email: doomersuk@gmail.com
+                <label className="font-bold">Email:</label> doomersuk@gmail.com
               </a>
             </div>
           </div>
@@ -81,7 +79,7 @@ const MenuItem = ({
     <li>
       <Link
         href={href}
-        className={`text-2xl font-accent block py-2 px-3 hover:opacity-80 rounded transition-colors uppercase ${
+        className={`text-2xl block py-1 hover:opacity-80 rounded transition-colors uppercase cursor-pointer hover:text-accent ${
           selected ? "opacity-100" : "opacity-30"
         }`}
       >

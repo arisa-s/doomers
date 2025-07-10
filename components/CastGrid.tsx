@@ -86,29 +86,27 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
                 )}
 
                 <div className="">
-                  <h3 className="text-lg font-accent text-accent font-bold uppercase">
+                  <h3 className="text-xl font-accent text-accent font-bold uppercase">
                     {member.actor}
                   </h3>
-                  <p className="text-primary font-medium">{member.character}</p>
+                  <p className="text-primary text-base">{member.character}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-6 mx-auto max-w-3xl items-center justify-center justify-content-center self-center">
-          {crewMembers.map((member) => (
+        <div className="grid grid-cols-2 gap-4 mx-auto max-w-4xl">
+          {crewMembers.map((member, index) => (
             <div
               key={member._id}
               onClick={() => openCrewModal(member)}
-              className="md:p-6 rounded-lg cursor-pointer transition-all duration-300"
+              className={`md:p-4 cursor-pointer ${index % 2 === 0 ? "text-right" : "-ml-2 text-left"}`}
             >
-              <h3 className="text-xl font-accent text-accent mb-2">
+              <h3 className="font-accent text-accent md:text-2xl">
                 {member.role}
               </h3>
-              <p className="text-primary font-medium mb-2 uppercase">
-                {member.name}
-              </p>
+              <p className="text-primary md:text-2xl">{member.name}</p>
             </div>
           ))}
         </div>
@@ -138,15 +136,15 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
               {selectedCast ? (
                 <>
                   {/* Actor Name */}
-                  <h2 className="text-lg font-accent text-accent mb-2 uppercase">
+                  <h2 className="text-3xl font-accent text-accent uppercase">
                     {selectedCast.actor}
                   </h2>
                   {/* Character */}
-                  <h3 className="text-md text-primary/80 mb-4">
+                  <h3 className="text-lg text-primary/80 mb-6">
                     as {selectedCast.character}
                   </h3>
                   {/* Bio */}
-                  <p className="text-primary leading-relaxed">
+                  <p className="text-primary leading-tight">
                     {selectedCast.bio}
                   </p>
                 </>
@@ -181,7 +179,7 @@ const ToggleButton = ({
 }) => {
   return (
     <button
-      className={`px-4 py-2 text-xl md:text-3xl font-accent cursor-pointer ${
+      className={`px-4 py-2 text-xl md:text-4xl font-accent cursor-pointer ${
         isActive ? "text-accent" : "text-muted"
       }`}
       onClick={onClick}

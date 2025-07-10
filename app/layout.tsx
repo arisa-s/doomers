@@ -1,5 +1,5 @@
 import "./globals.css";
-import { coolvetica, timesNewRoman } from "@/public/fonts";
+import { coolvetica, helveticaNeue, timesNewRoman } from "@/public/fonts";
 
 // Note: metadata can't be used in client components, so we'll handle this differently
 // export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${timesNewRoman.variable} ${coolvetica.variable} antialiased`}
+        className={`${timesNewRoman.variable} ${coolvetica.variable} ${helveticaNeue.variable} antialiased`}
       >
         {children}
       </body>

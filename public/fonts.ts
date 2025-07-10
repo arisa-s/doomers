@@ -41,3 +41,29 @@ export const timesNewRoman = localFont({
   ],
   variable: "--font-times-new-roman",
 });
+
+export const helveticaNeue = localFont({
+  src: [
+    {
+      path: "../fonts/helveticaNeue/HelveticaNeue-Roman.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/helveticaNeue/HelveticaNeue-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/helveticaNeue/HelveticaNeue-Bold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../fonts/helveticaNeue/HelveticaNeue-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-helvetica-neue",
+});

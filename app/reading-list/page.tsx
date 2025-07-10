@@ -150,7 +150,7 @@ export default async function ReadingList() {
       backgroundImage="url('/images/hands/handsFour.png')"
       pageTitle="/reading-list"
     >
-      <div className="space-y-12 md:space-y-16 text-lg">
+      <div className="space-y-12 md:space-y-16 text-lg max-w-5xl mx-auto">
         {/* Talks Section */}
         <section>
           <SectionTitle title="Talks" />
@@ -160,7 +160,7 @@ export default async function ReadingList() {
                 key={talk._id}
                 className="border-b border-accent pb-1 md:pb-2 hover:text-accent cursor-pointer"
               >
-                <h3 className="text-sm md:text-2xl mb-1 md:mb-2 leading-relaxed uppercase text-primary hover:text-accent">
+                <h3 className="text-sm md:text-xl text-primary hover:text-accent">
                   {talk.title}
                 </h3>
                 {talk.link && (
@@ -189,10 +189,10 @@ export default async function ReadingList() {
                   href={book.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary text-sm md:text-2xl cursor-pointer hover:text-accent"
+                  className=" text-sm md:text-xl cursor-pointer "
                 >
-                  <span className="italic uppercase">{book.title} </span>
-                  by {book.author}
+                  <span className="italic ">{book.title} </span>
+                  <span className="font-bold">by {book.author}</span>
                 </a>
               </div>
             ))}
@@ -209,10 +209,10 @@ export default async function ReadingList() {
                   href={article.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary text-sm md:text-2xl cursor-pointer hover:text-accent"
+                  className="text-primary text-sm md:text-xl cursor-pointer hover:text-accent"
                 >
-                  <span className="italic uppercase">{article.title} </span>
-                  by {article.author}
+                  <span className="italic ">{article.title} </span>
+                  <span className="font-bold">by {article.author}</span>
                 </a>
               </div>
             ))}
@@ -225,7 +225,7 @@ export default async function ReadingList() {
 
 const SectionTitle = ({ title }: { title: string }) => {
   return (
-    <h2 className="text-xl md:text-2xl font-accent text-accent mb-6 md:mb-8">
+    <h2 className="text-xl md:text-4xl font-accent text-accent mb-6 md:mb-8">
       {title}
     </h2>
   );
