@@ -10,10 +10,10 @@ export default function DesktopMenu({
 }) {
   return (
     <div className="sticky top-0 w-96 h-screen overflow-y-auto bg-white/20 backdrop-blur-xl backdrop-saturate-150 z-20 border-accent hidden md:block shadow-2xl">
-      <div className="px-8 py-16 flex flex-col h-full">
+      <div className="px-8 py-12 flex flex-col h-full">
         <Link href="/">
           <h1
-            className={`text-[68px] tracking-tighter font-accent`}
+            className={`text-[60px] lg:text-[68px] tracking-tighter font-accent`}
             style={{ color: accentColor }}
           >
             Doomers
@@ -34,7 +34,7 @@ export default function DesktopMenu({
         <div className="mt-auto space-y-6">
           <div className="flex flex-col items-center space-y-4">
             <button
-              className={`mb-4 text-white/90 py-2 px-7 mt-auto bg-[${accentColor}] font-accent w-full cursor-pointer uppercase`}
+              className={`mb-4 text-white/90 py-2 px-4 lg:px-7 mt-auto bg-[${accentColor}] font-accent w-full cursor-pointer uppercase`}
               style={{ backgroundColor: accentColor }}
             >
               Get Tickets Now
@@ -79,8 +79,8 @@ const MenuItem = ({
     <li>
       <Link
         href={href}
-        className={`text-2xl block py-1 hover:opacity-80 rounded transition-colors uppercase cursor-pointer hover:text-accent ${
-          selected ? "opacity-100" : "opacity-30"
+        className={`text-xl lg:text-2xl block py-1 hover:opacity-80 rounded transition-colors uppercase cursor-pointer hover:text-accent ${
+          selected ? "text-accent" : "text-black"
         }`}
       >
         {/* {selected ? "<" : null} */}

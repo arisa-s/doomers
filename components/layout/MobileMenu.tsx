@@ -30,16 +30,16 @@ export default function MobileMenu() {
               aria-expanded={menuOpen}
             >
               <svg
-                className="h-6 w-6 text-dimmed"
+                className="h-8 w-8 text-dimmed"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                viewBox="0 0 24 24"
+                viewBox="0 0 26 26"
                 stroke="currentColor"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  strokeWidth="1"
                   d="M4 6h16M4 12h16m-7 6h7"
                 />
               </svg>
@@ -61,7 +61,7 @@ export default function MobileMenu() {
 
           {/* Right side - Ticket info */}
           <div className="flex flex-col items-end">
-            <button className="text-white/90 bg-accent px-2 py-1  font-accent touch-manipulation">
+            <button className="text-white/90 bg-accent px-2 py-1 font-bold">
               Get Tickets Now
             </button>
           </div>
@@ -78,7 +78,7 @@ export default function MobileMenu() {
             animate={{ y: "0%", opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed flex flex-col top-0 left-0 right-0 w-full lg:hidden z-60 transition-colors duration-300 bg-primary-bg/90 backdrop-blur-md backdrop-filter"
+            className="fixed flex flex-col top-0 left-0 right-0 w-full lg:hidden z-60 transition-colors duration-300 bg-white/20 backdrop-blur-md backdrop-filter"
           >
             <button
               className="ml-auto mr-4 mt-4 cursor-pointer font-accent p-2 touch-manipulation"
@@ -86,7 +86,7 @@ export default function MobileMenu() {
             >
               CLOSE
             </button>
-            <span className="text-center mx-auto uppercase text-sm font-accent text-primary">
+            <span className="text-center mx-auto uppercase text-2xl text-accent">
               {displayPathname}
             </span>
             <div className="relative">
@@ -111,7 +111,7 @@ const NavigationMenu = ({
       className={
         orientation === "horizontal"
           ? "flex space-x-6"
-          : "flex flex-col p-5 space-y-6 text-center"
+          : "flex flex-col p-5 space-y-4 text-center"
       }
     >
       {LINKS.map(({ href, label }) => {
@@ -139,8 +139,8 @@ const NavLink = ({
     <Link
       href={href}
       className={`${
-        selected ? "text-primary underline" : "text-muted"
-      } hover:underline hover:text-primary uppercase text-xs font-accent`}
+        selected ? "text-accent" : "text-primary"
+      } hover:underline hover:text-accent uppercase text-2xl `}
     >
       {children}
     </Link>

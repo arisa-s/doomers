@@ -183,18 +183,7 @@ export default async function ReadingList() {
           <SectionTitle title="Books" />
           <div className="space-y-4">
             {books.map((book) => (
-              <div key={book._id}>
-                <a
-                  key={book._id}
-                  href={book.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=" text-sm md:text-xl cursor-pointer "
-                >
-                  <span className="italic ">{book.title} </span>
-                  <span className="font-bold">by {book.author}</span>
-                </a>
-              </div>
+              <Item key={book._id} item={book} />
             ))}
           </div>
         </section>
@@ -204,17 +193,7 @@ export default async function ReadingList() {
           <SectionTitle title="Articles" />
           <div className="space-y-4">
             {articles.map((article) => (
-              <div key={article._id}>
-                <a
-                  href={article.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary text-sm md:text-xl cursor-pointer hover:text-accent"
-                >
-                  <span className="italic ">{article.title} </span>
-                  <span className="font-bold">by {article.author}</span>
-                </a>
-              </div>
+              <Item key={article._id} item={article} />
             ))}
           </div>
         </section>
@@ -228,5 +207,21 @@ const SectionTitle = ({ title }: { title: string }) => {
     <h2 className="text-xl md:text-4xl font-accent text-accent mb-6 md:mb-8">
       {title}
     </h2>
+  );
+};
+
+const Item = ({ item }: { item: ReadingListItem }) => {
+  return (
+    <div key={item._id}>
+      <a
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary text-sm md:text-xl cursor-pointer hover:text-accent"
+      >
+        <span className="italic ">{item.title} </span>
+        <span className="font-bold">by {item.author}</span>
+      </a>
+    </div>
   );
 };
