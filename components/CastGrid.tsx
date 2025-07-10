@@ -56,10 +56,12 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-4 mx-auto max-w-4xl">
-          {crewMembers.map((member, index) => (
-            <CrewMemberCard key={member._id} member={member} index={index} />
-          ))}
+        <div className="min-h-screen">
+          <div className="grid grid-cols-2 gap-4 mx-auto max-w-4xl">
+            {crewMembers.map((member, index) => (
+              <CrewMemberCard key={member._id} member={member} index={index} />
+            ))}
+          </div>
         </div>
       )}
 

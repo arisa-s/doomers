@@ -61,7 +61,7 @@ export default function MobileMenu() {
 
           {/* Right side - Ticket info */}
           <div className="flex flex-col items-end">
-            <button className="text-white/90 bg-accent px-2 py-1 font-bold">
+            <button className="text-white/90 bg-accent px-2 pt-2 pb-1 font-bold">
               Get Tickets Now
             </button>
           </div>

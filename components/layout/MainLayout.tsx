@@ -38,8 +38,13 @@ export default function MainLayout({
   accentColor,
 }: MainLayoutProps) {
   // Extract the actual image URL from the CSS background-image string
-  const imageUrl = extractImageUrl(backgroundImage);
+  const baseImageUrl = extractImageUrl(backgroundImage);
   const { isMobile } = useResponsive();
+
+  // Append 'Mobile' to the image URL when on mobile
+  const imageUrl = isMobile
+    ? baseImageUrl.replace(/(\.[^.]+)$/, "Mobile$1")
+    : baseImageUrl;
 
   // Generate optimized background image using Next.js
   const {
@@ -63,6 +68,8 @@ export default function MainLayout({
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+            minHeight: "100vh",
           }}
         >
           {children}
@@ -82,7 +89,7 @@ export default function MainLayout({
           />
         )}
 
-        <div className="min-h-screen flex-col text-sm md:text-lg relative z-10">
+        <div className="min-h-screen flex-col text-sm md:text-lg relative z-10 ">
           <MobileMenu />
           <div className="flex relative z-20">
             <DesktopMenu accentColor={accentColor} />
