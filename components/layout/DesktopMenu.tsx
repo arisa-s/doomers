@@ -19,7 +19,7 @@ export default function DesktopMenu({
             Doomers
           </h1>
         </Link>
-        <span className="text -mt-4">18 Sept - 4 Oct</span>
+        <span className="text -mt-4">18 Sept - 3 Oct</span>
 
         <nav className="mt-24">
           <ul className="">

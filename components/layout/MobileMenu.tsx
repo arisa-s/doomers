@@ -55,7 +55,7 @@ export default function MobileMenu() {
                   Doomers
                 </h1>
               </button>
-              <span className="text-xs">18 Sept - 4 Oct</span>
+              <span className="text-xs">18 Sept - 3 Oct</span>
             </div>
           </div>
 
