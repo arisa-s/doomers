@@ -68,7 +68,6 @@ export default function MainLayout({
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            backgroundAttachment: "fixed",
             minHeight: "100vh",
           }}
         >
