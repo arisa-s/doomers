@@ -62,16 +62,19 @@ export default function MainLayout({
     <ConditionalWrap
       condition={isMobile}
       wrapper={(children) => (
-        <div
-          style={{
-            backgroundImage: optimizedBackgroundImage,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            minHeight: "100vh",
-          }}
-        >
-          {children}
+        <div className="relative min-h-screen">
+          {/* Fixed background for mobile */}
+          <div
+            className="fixed inset-0 z-0"
+            style={{
+              backgroundImage: optimizedBackgroundImage,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+          {/* Content wrapper with higher z-index */}
+          <div className="relative z-10">{children}</div>
         </div>
       )}
     >
