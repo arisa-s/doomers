@@ -38,13 +38,13 @@ export default function MainLayout({
   accentColor,
 }: MainLayoutProps) {
   // Extract the actual image URL from the CSS background-image string
-  const imageUrl = extractImageUrl(backgroundImage);
+  const baseImageUrl = extractImageUrl(backgroundImage);
   const { isMobile } = useResponsive();
 
-  // // Append 'Mobile' to the image URL when on mobile
-  // const imageUrl = isMobile
-  //   ? baseImageUrl.replace(/(\.[^.]+)$/, "Mobile$1")
-  //   : baseImageUrl;
+  // Append 'Mobile' to the image URL when on mobile
+  const imageUrl = isMobile
+    ? baseImageUrl.replace(/(\.[^.]+)$/, "Mobile$1")
+    : baseImageUrl;
 
   // Generate optimized background image using Next.js
   const {
