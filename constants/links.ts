@@ -7,3 +7,6 @@ export const LINKS = [
   { href: "/reading-list", label: "Reading List" },
   { href: "/live-recording", label: "Live Recording" },
 ];
+
+export const TICKETTAILOR_LINK =
+  "https://app.tickettailor.com/events/doomers/1782012";

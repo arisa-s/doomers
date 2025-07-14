@@ -1,5 +1,5 @@
 "use client";
-import { LINKS } from "@/constants";
+import { LINKS, TICKETTAILOR_LINK } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -36,6 +36,9 @@ export default function DesktopMenu({
             <button
               className={`mb-4 text-white/90 py-2 px-4 lg:px-7 mt-auto bg-[${accentColor}] font-accent w-full cursor-pointer uppercase`}
               style={{ backgroundColor: accentColor }}
+              onClick={() => {
+                window.open(TICKETTAILOR_LINK, "_blank");
+              }}
             >
               Get Tickets Now
             </button>

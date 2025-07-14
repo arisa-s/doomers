@@ -1,4 +1,4 @@
-import { LINKS } from "@/constants";
+import { LINKS, TICKETTAILOR_LINK } from "@/constants";
 import { useClickOutside } from "@/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -61,7 +61,12 @@ export default function MobileMenu() {
 
           {/* Right side - Ticket info */}
           <div className="flex flex-col items-end">
-            <button className="text-white/90 bg-accent px-2 pt-2 pb-1 font-bold">
+            <button
+              className="text-white/90 bg-accent px-2 pt-2 pb-1 font-bold"
+              onClick={() => {
+                window.open(TICKETTAILOR_LINK, "_blank");
+              }}
+            >
               Get Tickets Now
             </button>
           </div>
