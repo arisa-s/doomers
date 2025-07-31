@@ -82,7 +82,7 @@ const MenuItem = ({
     <li>
       <Link
         href={href}
-        className={`text-xl lg:text-2xl block py-1 hover:opacity-80 rounded transition-colors uppercase cursor-pointer hover:text-accent ${
+        className={`text-xl lg:text-2xl block py-1 hover:opacity-80 rounded transition-colors cursor-pointer hover:text-accent ${
           selected ? "text-accent" : "text-black"
         }`}
       >
