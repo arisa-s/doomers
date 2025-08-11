@@ -8,5 +8,4 @@ export const LINKS = [
   // { href: "/live-recording", label: "Live Recording" },
 ];
 
-export const TICKETTAILOR_LINK =
-  "https://app.tickettailor.com/events/doomers/1782012";
+export const TICKETTAILOR_LINK = "https://buytickets.at/doomers/1782012";
