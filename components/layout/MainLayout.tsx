@@ -42,9 +42,7 @@ export default function MainLayout({
   const { isMobile } = useResponsive();
 
   // Append 'Mobile' to the image URL when on mobile
-  const imageUrl = isMobile
-    ? baseImageUrl.replace(/(\.[^.]+)$/, "Mobile$1")
-    : baseImageUrl;
+  const imageUrl = baseImageUrl;
 
   // Generate optimized background image using Next.js
   const {
