@@ -1,3 +1,4 @@
+"use client";
 import { LINKS, TICKETTAILOR_LINK } from "@/constants";
 import { useClickOutside } from "@/utils";
 import { AnimatePresence, motion } from "framer-motion";
