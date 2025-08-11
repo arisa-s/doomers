@@ -20,7 +20,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
 
   const openCastModal = (cast: CastMember) => {
     setSelectedCast(cast);
-    setIsModalOpen(true);
+    // setIsModalOpen(true);
   };
 
   const closeModal = () => {
