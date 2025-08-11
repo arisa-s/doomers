@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { CastMember, CrewMember } from "@/lib/sanity";
-import { client } from "@/lib/sanity";
-import imageUrlBuilder from "@sanity/image-url";
-import { Image } from "next-sanity/image";
+// import { client } from "@/lib/sanity";
+// import imageUrlBuilder from "@sanity/image-url";
+// import { Image } from "next-sanity/image";
 
-const builder = imageUrlBuilder(client);
+// const builder = imageUrlBuilder(client);
 
 interface CastGridProps {
   castMembers: CastMember[];
@@ -126,7 +126,7 @@ const CastMemberCard = ({
       className="transition-all duration-300 cursor-pointer hover:scale-105"
     >
       <div className="flex flex-col items-center text-center">
-        {member.profileImage ? (
+        {/* {member.profileImage ? (
           <div className="w-full h-60 md:h-80 relative mb-2 ">
             <Image
               src={builder
@@ -146,7 +146,7 @@ const CastMemberCard = ({
               headshot here
             </span>
           </div>
-        )}
+        )} */}
 
         <div className="">
           <h3 className="text-lg md:text-xl font-accent text-accent font-bold uppercase">
