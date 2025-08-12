@@ -52,7 +52,7 @@ export default function MobileMenu() {
                 aria-expanded={menuOpen}
                 className="touch-manipulation"
               >
-                <h1 className="text-3xl font-accent tracking-tighter text-accent ">
+                <h1 className="text-3xl font-accent tracking-tighter text-accent">
                   Doomers
                 </h1>
               </button>
@@ -63,7 +63,7 @@ export default function MobileMenu() {
           {/* Right side - Ticket info */}
           <div className="flex flex-col items-end">
             <button
-              className="text-white/90 bg-accent px-4 pt-3 pb-2 font-bold"
+              className="text-white/90 bg-accent px-3 pt-3 pb-2 font-bold rounded-xs"
               onClick={() => {
                 window.open(TICKETTAILOR_LINK, "_blank");
               }}
