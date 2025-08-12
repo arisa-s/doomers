@@ -63,7 +63,7 @@ export default function MobileMenu() {
           {/* Right side - Ticket info */}
           <div className="flex flex-col items-end">
             <button
-              className="text-white/90 bg-accent px-2 pt-2 pb-1 font-bold"
+              className="text-white/90 bg-accent px-4 pt-3 pb-2 font-bold"
               onClick={() => {
                 window.open(TICKETTAILOR_LINK, "_blank");
               }}
