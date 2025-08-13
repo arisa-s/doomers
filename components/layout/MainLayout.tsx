@@ -67,6 +67,7 @@ export default function MainLayout({
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          willChange: "transform",
         }}
       />
       {/* Content wrapper with higher z-index */}
