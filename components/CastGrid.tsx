@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { CastMember, CrewMember } from "@/lib/sanity";
-// import { client } from "@/lib/sanity";
-// import imageUrlBuilder from "@sanity/image-url";
-// import { Image } from "next-sanity/image";
+import { client } from "@/lib/sanity";
+import imageUrlBuilder from "@sanity/image-url";
+import { Image } from "next-sanity/image";
 
-// const builder = imageUrlBuilder(client);
+const builder = imageUrlBuilder(client);
 
 interface CastGridProps {
   castMembers: CastMember[];
@@ -20,7 +20,7 @@ export default function CastGrid({ castMembers, crewMembers }: CastGridProps) {
 
   const openCastModal = (cast: CastMember) => {
     setSelectedCast(cast);
-    // setIsModalOpen(true);
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
@@ -126,30 +126,33 @@ const CastMemberCard = ({
       className="transition-all duration-300 cursor-pointer hover:scale-105"
     >
       <div className="flex flex-col items-center text-center">
-        {/* {member.profileImage ? (
-          <div className="w-full h-60 md:h-80 relative mb-2 ">
+        {member.profileImage ? (
+          <div className="w-full relative mb-2" style={{ aspectRatio: "3/4" }}>
             <Image
               src={builder
                 .image(member.profileImage)
-                .width(400)
+                .width(300)
                 .height(400)
                 .url()}
               alt={member.actor}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         ) : (
-          <div className="w-full h-60 md:h-80 backdrop-blur-sm bg-white/20 flex items-center justify-center mb-2 text-white font-bold text-lg">
+          <div
+            className="w-full backdrop-blur-sm bg-white/20 flex items-center justify-center mb-2 text-white font-bold text-lg"
+            style={{ aspectRatio: "3/4" }}
+          >
             <span className="text-dimmed text-center items-center text-base font-normal">
               headshot here
             </span>
           </div>
-        )} */}
+        )}
 
         <div className="">
-          <h3 className="text-lg md:text-xl font-accent text-accent font-bold uppercase">
+          <h3 className="text-lg md:text-xl font-accent text-accent font-medium uppercase">
             {member.actor}
           </h3>
           <p className="text-primary text-base">{member.character}</p>
