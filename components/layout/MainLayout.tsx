@@ -79,7 +79,7 @@ export default function MainLayout({
             <PixelDistortionBackground
               key={imageUrl} // Force re-mount on image change
               imageSrc={imageUrl}
-              distortionStrength={100}
+              distortionStrength={30}
               mouseRadius={0.15}
               relaxationSpeed={0.05}
             />
