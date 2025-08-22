@@ -17,7 +17,7 @@ export default function NewHome() {
     >
       <div className="space-y-36 items-center justify-center mt-12 text-xl md:text-3xl lg:text-3xl max-w-4xl ml-auto">
         <section>
-          <p className="text-accent mb-4 text-right text-5xl">
+          <p className="text-accent mb-4 text-right text-2xl md:text-5xl">
             Post-show talk
             <br /> on 20th September, 21:30 - 22:30 <br />
             with Alexandra Mousavizadeh <br />& Jennifer Nadel
