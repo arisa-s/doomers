@@ -19,7 +19,7 @@ export default function NewHome() {
         <section>
           <p className="text-accent mb-4 text-right text-2xl md:text-5xl">
             Post-show talk
-            <br /> on 20th September, 21:30 - 22:30 <br />
+            <br /> on 20th September, 21:30 - 22:00 <br />
             with Alexandra Mousavizadeh <br />& Jennifer Nadel
           </p>
         </section>
