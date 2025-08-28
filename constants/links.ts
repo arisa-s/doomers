@@ -2,9 +2,11 @@
 
 export const LINKS = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/cast-and-crew", label: "Cast & Crew" },
   { href: "/press", label: "Press" },
   { href: "/reading-list", label: "Reading List" },
+
   // { href: "/live-recording", label: "Live Recording" },
 ];
 
