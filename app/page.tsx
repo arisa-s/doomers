@@ -9,29 +9,44 @@ export const metadata: Metadata = {
     "A razor-sharp reflection of our accelerating world, where tech, ethics, and ego collide.",
 };
 
-export default function NewHome() {
+export default function Home() {
   return (
     <MainLayout
       backgroundImage="url('/images/hands/handsTwo.png')"
       pageTitle="/"
     >
-      <div className="space-y-36 items-center justify-center mt-12 text-xl md:text-3xl lg:text-3xl max-w-4xl ml-auto">
-        <section>
-          <p className="text-accent mb-4 text-right text-2xl md:text-5xl">
-            Post-show talk
-            <br /> on 20th September, 21:30 - 22:00 <br />
-            with Alexandra Mousavizadeh <br />& Jennifer Nadel
-          </p>
-        </section>
+      <div className="space-y-12 items-center justify-center mt-12 text-xl md:text-3xl lg:text-3xl max-w-4xl ml-auto">
+        <p className="text-accent italic">
+          In humanity&apos;s last act, who plays god?
+        </p>
 
         {/* Main content sections */}
-        <section className="flex flex-col space-y-24">
-          <p className="text-primary mb-4 text-right">
-            18 September - 3 October, 19:30 - 22:00 <br />
-            (18, 19, 22, 24, 25, 26, 27 September, 1, 2, 3 October)
+        <section>
+          <p className="text-primary mb-4 ">
+            <span className="text-accent">Doomers</span> is a razor-sharp
+            reflection of our accelerating world, where tech, ethics, and ego
+            collide. It&apos;s about the thrill of creation, the fear of losing
+            control, and the uneasy realization that the future might already be
+            slipping from our grasp. A provocative and deeply human drama,
+            Doomers asks: can we survive the technologies we&apos;ve unleashed?
+            And should we even want&nbsp;to?
           </p>
-          <p className="text-primary text-right">
-            Rose Lipman Building, 43 De Beauvoir Rd, London N1 5TH, UK
+        </section>
+        <section>
+          <p className="text-primary mb-4">
+            <span className=" text-accent ">Matthew Gasda</span> has emerged as
+            one of New York&apos;s most innovative theatrical voices, creating
+            immersive productions that transform unconventional spaces into
+            intimate stages for contemporary drama. As playwright-in-residence
+            at the Brooklyn Center for Theater Research, which he co-founded,
+            Gasda has garnered attention for works like &quot;Dimes Square&quot;
+            (2022) and &quot;Zoomers&quot; (2023)—plays that range from
+            razor-sharp social satire to deeply felt family drama, earning
+            acclaim for their nuanced exploration of life across generations.
+            His latest work, &quot;Doomers&quot; (2024), tackles the cultural
+            and philosophical implications of artificial intelligence,
+            demonstrating his ability to capture watershed moments in
+            contemporary&nbsp;society.
           </p>
         </section>
       </div>
